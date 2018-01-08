@@ -1,0 +1,1831 @@
+[
+{
+   "model": "contenttypes.contenttype",
+   "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+   },
+   "pk": 1
+},
+{
+   "model": "contenttypes.contenttype",
+   "fields": {
+      "app_label": "auth",
+      "model": "permission"
+   },
+   "pk": 2
+},
+{
+   "model": "contenttypes.contenttype",
+   "fields": {
+      "app_label": "auth",
+      "model": "group"
+   },
+   "pk": 3
+},
+{
+   "model": "contenttypes.contenttype",
+   "fields": {
+      "app_label": "auth",
+      "model": "user"
+   },
+   "pk": 4
+},
+{
+   "model": "contenttypes.contenttype",
+   "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+   },
+   "pk": 5
+},
+{
+   "model": "contenttypes.contenttype",
+   "fields": {
+      "app_label": "sessions",
+      "model": "session"
+   },
+   "pk": 6
+},
+{
+   "model": "contenttypes.contenttype",
+   "fields": {
+      "app_label": "projects",
+      "model": "projectcategory"
+   },
+   "pk": 8
+},
+{
+   "model": "contenttypes.contenttype",
+   "fields": {
+      "app_label": "stuff",
+      "model": "stuff"
+   },
+   "pk": 9
+},
+{
+   "model": "contenttypes.contenttype",
+   "fields": {
+      "app_label": "stuff",
+      "model": "stuffimage"
+   },
+   "pk": 10
+},
+{
+   "model": "contenttypes.contenttype",
+   "fields": {
+      "app_label": "addendum",
+      "model": "snippet"
+   },
+   "pk": 11
+},
+{
+   "model": "contenttypes.contenttype",
+   "fields": {
+      "app_label": "addendum",
+      "model": "snippettranslation"
+   },
+   "pk": 12
+},
+{
+   "model": "contenttypes.contenttype",
+   "fields": {
+      "app_label": "replies",
+      "model": "replies"
+   },
+   "pk": 13
+},
+{
+   "model": "contenttypes.contenttype",
+   "fields": {
+      "app_label": "replies",
+      "model": "repliesimage"
+   },
+   "pk": 14
+},
+{
+   "model": "contenttypes.contenttype",
+   "fields": {
+      "app_label": "projects",
+      "model": "projectimage"
+   },
+   "pk": 15
+},
+{
+   "model": "contenttypes.contenttype",
+   "fields": {
+      "app_label": "send_mail",
+      "model": "order"
+   },
+   "pk": 16
+},
+{
+   "model": "sessions.session",
+   "fields": {
+      "session_data": "MDYxOTUwZGMzMGJhZGQwZDM0NWY2YzUwYmQyMmI1NmViMjUyNDQzNTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjODU2MGI4NTE0ZDkzMjcyMDM2YWRlNWQ3ZDcwMDRhNGJmZmZlN2QxIn0=",
+      "expire_date": "2018-01-18T09:47:17.356Z"
+   },
+   "pk": "l5u4e5okieilfpyr42kci2c0xoesqxb7"
+},
+{
+   "model": "projects.projectcategory",
+   "fields": {
+      "name": "\u0413\u043e\u0441\u0442\u0438\u043d\u044b\u0435",
+      "is_active": true
+   },
+   "pk": 1
+},
+{
+   "model": "projects.projectcategory",
+   "fields": {
+      "name": "\u041f\u0440\u0438\u0445\u043e\u0436\u0438\u0435",
+      "is_active": true
+   },
+   "pk": 2
+},
+{
+   "model": "projects.projectcategory",
+   "fields": {
+      "name": "\u041a\u0443\u0445\u043d\u0438",
+      "is_active": true
+   },
+   "pk": 3
+},
+{
+   "model": "projects.projectimage",
+   "fields": {
+      "category": 1,
+      "image": "static/img/portfolio/1_NqWOe6S.png"
+   },
+   "pk": 1
+},
+{
+   "model": "projects.projectimage",
+   "fields": {
+      "category": 1,
+      "image": "static/img/portfolio/2_sqduBJ9.jpg"
+   },
+   "pk": 2
+},
+{
+   "model": "projects.projectimage",
+   "fields": {
+      "category": 1,
+      "image": "static/img/portfolio/3_5NUetLK.jpg"
+   },
+   "pk": 3
+},
+{
+   "model": "projects.projectimage",
+   "fields": {
+      "category": 1,
+      "image": "static/img/portfolio/4_f1z8dJC.jpg"
+   },
+   "pk": 4
+},
+{
+   "model": "projects.projectimage",
+   "fields": {
+      "category": 2,
+      "image": "static/img/portfolio/1_Uh8JAkL.png"
+   },
+   "pk": 5
+},
+{
+   "model": "projects.projectimage",
+   "fields": {
+      "category": 2,
+      "image": "static/img/portfolio/2_5hg6WpB.jpg"
+   },
+   "pk": 6
+},
+{
+   "model": "projects.projectimage",
+   "fields": {
+      "category": 2,
+      "image": "static/img/portfolio/3_Bn7AQwv.jpg"
+   },
+   "pk": 7
+},
+{
+   "model": "projects.projectimage",
+   "fields": {
+      "category": 2,
+      "image": "static/img/portfolio/4_1rqktX6.jpg"
+   },
+   "pk": 8
+},
+{
+   "model": "projects.projectimage",
+   "fields": {
+      "category": 3,
+      "image": "static/img/portfolio/1_XgKgDsi.png"
+   },
+   "pk": 9
+},
+{
+   "model": "projects.projectimage",
+   "fields": {
+      "category": 3,
+      "image": "static/img/portfolio/2_QcUmfbU.jpg"
+   },
+   "pk": 10
+},
+{
+   "model": "projects.projectimage",
+   "fields": {
+      "category": 3,
+      "image": "static/img/portfolio/3_JAe6SW5.jpg"
+   },
+   "pk": 11
+},
+{
+   "model": "projects.projectimage",
+   "fields": {
+      "category": 3,
+      "image": "static/img/portfolio/4_os8mVKn.jpg"
+   },
+   "pk": 12
+},
+{
+   "model": "stuff.stuff",
+   "fields": {
+      "name": "\u0410\u043d\u043d\u0430 \u0421\u043a\u0432\u043e\u0440\u0446\u043e\u0432\u0430",
+      "post": "\u0414\u0438\u0437\u0430\u0439\u043d\u0435\u0440 \u0438\u043d\u0442\u0435\u0440\u044c\u0435\u0440\u043e\u0432 (\u0441\u0442\u0430\u0436 7 \u043b\u0435\u0442)",
+      "description": "\u041f\u0440\u0438\u044f\u0442\u043d\u043e \u0437\u043d\u0430\u0442\u044c \u0447\u0442\u043e \u0442\u0432\u043e\u044f \u0440\u0430\u0431\u043e\u0442\u0430 \u0432\u043b\u0438\u044f\u0435\u0442 \u043d\u0430 \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u043e \u0434\u043b\u044f \u0436\u0438\u0437\u043d\u0438. \u042d\u0442\u043e \u043e\u0431\u043e\u044e\u0434\u043d\u0430\u044f \u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0441\u0442\u044c \u0437\u0430\u043a\u0430\u0437\u0447\u0438\u043a\u0430 \u0438 \u043f\u043e\u0434\u0440\u044f\u0434\u0447\u0438\u043a\u0430, \u043f\u043e\u044d\u0442\u043e\u043c\u0443 \u044f \u0432\u0441\u0435\u0433\u0434\u0430 \u043f\u0440\u0438\u0437\u044b\u0432\u0430\u044e \u0437\u0430\u043a\u0430\u0437\u0430\u0447\u0438\u043a\u043e\u0432 \u0431\u044b\u0442\u044c \u0441\u043e\u0430\u0432\u0442\u043e\u0440\u0430\u043c\u0438 \u043f\u0440\u043e\u0435\u043a\u0442\u0430 \u043f\u0440\u0438 \u0435\u0433\u043e \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0435 \u0438 \u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438."
+   },
+   "pk": 1
+},
+{
+   "model": "stuff.stuff",
+   "fields": {
+      "name": "\u0410\u043d\u043d\u0430 \u0421\u043a\u0432\u043e\u0440\u0446\u043e\u0432\u0430",
+      "post": "\u0414\u0438\u0437\u0430\u0439\u043d\u0435\u0440 \u0438\u043d\u0442\u0435\u0440\u044c\u0435\u0440\u043e\u0432 (\u0441\u0442\u0430\u0436 7 \u043b\u0435\u0442)",
+      "description": "\u041f\u0440\u0438\u044f\u0442\u043d\u043e \u0437\u043d\u0430\u0442\u044c \u0447\u0442\u043e \u0442\u0432\u043e\u044f \u0440\u0430\u0431\u043e\u0442\u0430 \u0432\u043b\u0438\u044f\u0435\u0442 \u043d\u0430 \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u043e \u0434\u043b\u044f \u0436\u0438\u0437\u043d\u0438. \u042d\u0442\u043e \u043e\u0431\u043e\u044e\u0434\u043d\u0430\u044f \u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0441\u0442\u044c \u0437\u0430\u043a\u0430\u0437\u0447\u0438\u043a\u0430 \u0438 \u043f\u043e\u0434\u0440\u044f\u0434\u0447\u0438\u043a\u0430, \u043f\u043e\u044d\u0442\u043e\u043c\u0443 \u044f \u0432\u0441\u0435\u0433\u0434\u0430 \u043f\u0440\u0438\u0437\u044b\u0432\u0430\u044e \u0437\u0430\u043a\u0430\u0437\u0430\u0447\u0438\u043a\u043e\u0432 \u0431\u044b\u0442\u044c \u0441\u043e\u0430\u0432\u0442\u043e\u0440\u0430\u043c\u0438 \u043f\u0440\u043e\u0435\u043a\u0442\u0430 \u043f\u0440\u0438 \u0435\u0433\u043e \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0435 \u0438 \u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438."
+   },
+   "pk": 2
+},
+{
+   "model": "stuff.stuff",
+   "fields": {
+      "name": "\u0410\u043d\u043d\u0430 \u0421\u043a\u0432\u043e\u0440\u0446\u043e\u0432\u0430",
+      "post": "\u0414\u0438\u0437\u0430\u0439\u043d\u0435\u0440 \u0438\u043d\u0442\u0435\u0440\u044c\u0435\u0440\u043e\u0432 (\u0441\u0442\u0430\u0436 7 \u043b\u0435\u0442)",
+      "description": "\u041f\u0440\u0438\u044f\u0442\u043d\u043e \u0437\u043d\u0430\u0442\u044c \u0447\u0442\u043e \u0442\u0432\u043e\u044f \u0440\u0430\u0431\u043e\u0442\u0430 \u0432\u043b\u0438\u044f\u0435\u0442 \u043d\u0430 \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u043e \u0434\u043b\u044f \u0436\u0438\u0437\u043d\u0438. \u042d\u0442\u043e \u043e\u0431\u043e\u044e\u0434\u043d\u0430\u044f \u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0441\u0442\u044c \u0437\u0430\u043a\u0430\u0437\u0447\u0438\u043a\u0430 \u0438 \u043f\u043e\u0434\u0440\u044f\u0434\u0447\u0438\u043a\u0430, \u043f\u043e\u044d\u0442\u043e\u043c\u0443 \u044f \u0432\u0441\u0435\u0433\u0434\u0430 \u043f\u0440\u0438\u0437\u044b\u0432\u0430\u044e \u0437\u0430\u043a\u0430\u0437\u0447\u0438\u043a\u043e\u0432 \u0431\u044b\u0442\u044c \u0441\u043e\u0430\u0432\u0442\u043e\u0440\u0430\u043c\u0438 \u043f\u0440\u043e\u0435\u043a\u0442\u0430 \u043f\u0440\u0438 \u0435\u0433\u043e \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0435 \u0438 \u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438."
+   },
+   "pk": 3
+},
+{
+   "model": "stuff.stuff",
+   "fields": {
+      "name": "\u0410\u043d\u043d\u0430 \u0421\u043a\u0432\u043e\u0440\u0446\u043e\u0432\u0430",
+      "post": "\u0414\u0438\u0437\u0430\u0439\u043d\u0435\u0440 \u0438\u043d\u0442\u0435\u0440\u044c\u0435\u0440\u043e\u0432 (\u0441\u0442\u0430\u0436 7 \u043b\u0435\u0442)",
+      "description": "\u041f\u0440\u0438\u044f\u0442\u043d\u043e \u0437\u043d\u0430\u0442\u044c \u0447\u0442\u043e \u0442\u0432\u043e\u044f \u0440\u0430\u0431\u043e\u0442\u0430 \u0432\u043b\u0438\u044f\u0435\u0442 \u043d\u0430 \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u043e \u0434\u043b\u044f \u0436\u0438\u0437\u043d\u0438. \u042d\u0442\u043e \u043e\u0431\u043e\u044e\u0434\u043d\u0430\u044f \u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0441\u0442\u044c \u0437\u0430\u043a\u0430\u0437\u0447\u0438\u043a\u0430 \u0438 \u043f\u043e\u0434\u0440\u044f\u0434\u0447\u0438\u043a\u0430, \u043f\u043e\u044d\u0442\u043e\u043c\u0443 \u044f \u0432\u0441\u0435\u0433\u0434\u0430 \u043f\u0440\u0438\u0437\u044b\u0432\u0430\u044e \u0437\u0430\u043a\u0430\u0437\u0430\u0447\u0438\u043a\u043e\u0432 \u0431\u044b\u0442\u044c \u0441\u043e\u0430\u0432\u0442\u043e\u0440\u0430\u043c\u0438 \u043f\u0440\u043e\u0435\u043a\u0442\u0430 \u043f\u0440\u0438 \u0435\u0433\u043e \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0435 \u0438 \u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438."
+   },
+   "pk": 4
+},
+{
+   "model": "stuff.stuff",
+   "fields": {
+      "name": "\u0410\u043d\u043d\u0430 \u0421\u043a\u0432\u043e\u0440\u0446\u043e\u0432\u0430",
+      "post": "\u0414\u0440\u0443\u0433\u043e\u0439 \u043a\u0440\u0443\u0442\u043e\u0439 \u0441\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a",
+      "description": "\u041f\u0440\u0438\u044f\u0442\u043d\u043e \u0437\u043d\u0430\u0442\u044c \u0447\u0442\u043e \u0442\u0432\u043e\u044f \u0440\u0430\u0431\u043e\u0442\u0430 \u0432\u043b\u0438\u044f\u0435\u0442 \u043d\u0430 \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u043e \u0434\u043b\u044f \u0436\u0438\u0437\u043d\u0438. \u042d\u0442\u043e \u043e\u0431\u043e\u044e\u0434\u043d\u0430\u044f \u043e\u0442\u0432\u0435\u0442\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0441\u0442\u044c \u0437\u0430\u043a\u0430\u0437\u0447\u0438\u043a\u0430 \u0438 \u043f\u043e\u0434\u0440\u044f\u0434\u0447\u0438\u043a\u0430, \u043f\u043e\u044d\u0442\u043e\u043c\u0443 \u044f \u0432\u0441\u0435\u0433\u0434\u0430 \u043f\u0440\u0438\u0437\u044b\u0432\u0430\u044e \u0437\u0430\u043a\u0430\u0437\u0430\u0447\u0438\u043a\u043e\u0432 \u0431\u044b\u0442\u044c \u0441\u043e\u0430\u0432\u0442\u043e\u0440\u0430\u043c\u0438 \u043f\u0440\u043e\u0435\u043a\u0442\u0430 \u043f\u0440\u0438 \u0435\u0433\u043e \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0435 \u0438 \u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438."
+   },
+   "pk": 5
+},
+{
+   "model": "stuff.stuffimage",
+   "fields": {
+      "stuff": 1,
+      "image": "static/img/stuff/1.png"
+   },
+   "pk": 1
+},
+{
+   "model": "stuff.stuffimage",
+   "fields": {
+      "stuff": 2,
+      "image": "static/img/stuff/2.png"
+   },
+   "pk": 2
+},
+{
+   "model": "stuff.stuffimage",
+   "fields": {
+      "stuff": 3,
+      "image": "static/img/stuff/3.png"
+   },
+   "pk": 3
+},
+{
+   "model": "stuff.stuffimage",
+   "fields": {
+      "stuff": 4,
+      "image": "static/img/stuff/4.png"
+   },
+   "pk": 4
+},
+{
+   "model": "stuff.stuffimage",
+   "fields": {
+      "stuff": 5,
+      "image": "static/img/stuff/5.png"
+   },
+   "pk": 5
+},
+{
+   "model": "replies.replies",
+   "fields": {
+      "name": "\u0413\u0435\u043e\u0440\u0433\u0438\u0439 \u041c\u043e\u0448\u043a\u043e\u0432",
+      "description": "\u0414\u0438\u0437\u0430\u0439\u043d-\u043f\u0440\u043e\u0435\u043a\u0442 \u0438 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0441\u043d\u044b\u0439 \u0440\u0435\u043c\u043e\u043d\u0442 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u044b 90 \u043a\u0432/\u043c",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "iframe": ""
+   },
+   "pk": 1
+},
+{
+   "model": "replies.replies",
+   "fields": {
+      "name": "\u0413\u0435\u043e\u0440\u0433\u0438\u0439 \u041c\u043e\u0448\u043a\u043e\u0432",
+      "description": "\u0414\u0438\u0437\u0430\u0439\u043d-\u043f\u0440\u043e\u0435\u043a\u0442 \u0438 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0441\u043d\u044b\u0439 \u0440\u0435\u043c\u043e\u043d\u0442 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u044b 90 \u043a\u0432/\u043c",
+      "text": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+      "iframe": ""
+   },
+   "pk": 2
+},
+{
+   "model": "replies.replies",
+   "fields": {
+      "name": "\u041b\u0435\u0445\u0430 \u041b\u0435\u0445\u043e\u0432\u0438\u0447",
+      "description": "\u0420\u0435\u043c\u043e\u043d\u0442 \u043f\u0435\u043d\u0442\u0445\u0430\u0443\u0441\u0430",
+      "text": "\u041c\u0434\u0430 \u043d\u0443 \u043d\u043e\u0440\u043c \u0440\u0435\u043c\u043e\u043d\u0442))",
+      "iframe": ""
+   },
+   "pk": 3
+},
+{
+   "model": "replies.repliesimage",
+   "fields": {
+      "reply": 1,
+      "image": "static/img/replies/1.png"
+   },
+   "pk": 1
+},
+{
+   "model": "replies.repliesimage",
+   "fields": {
+      "reply": 2,
+      "image": "static/img/replies/2.png"
+   },
+   "pk": 2
+},
+{
+   "model": "replies.repliesimage",
+   "fields": {
+      "reply": 3,
+      "image": "static/img/replies/7.png"
+   },
+   "pk": 3
+},
+{
+   "model": "send_mail.order",
+   "fields": {
+      "name": "\u0432\u0430\u0441\u044f",
+      "phone": "2241323",
+      "type": "\u0417\u0430\u043a\u0430\u0437 \u0431\u0430\u0437\u043e\u0432\u043e\u0433\u043e \u0434\u0438\u0437\u0430\u0439\u043d \u043f\u0440\u043e\u0435\u043a\u0442\u0430",
+      "is_processed": false,
+      "created": "2018-01-06T10:28:59.412Z",
+      "text": null,
+      "square": null,
+      "float_type": null,
+      "services": null,
+      "style": null
+   },
+   "pk": 37
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u041a\u043e\u043d\u0442\u0440\u043e\u043b\u0438\u0440\u0443\u0439\u0442\u0435 \u0440\u0430\u0431\u043e\u0442\u0443 \u0432 \u043e\u043d\u043b\u0430\u0439\u043d-\u0440\u0435\u0436\u0438\u043c\u0435"
+   },
+   "pk": "0058c31176a029e8e2c4802d4891583b"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0414\u0438\u0437\u0430\u0439\u043d \u043f\u0440\u043e\u0435\u043a\u0442 - \u044d\u0442\u043e \u0438\u043d\u0441\u0442\u0440\u0443\u043c\u0435\u043d\u0442 \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u043f\u043e\u0437\u0432\u043e\u043b\u0438\u0442 \u0441\u044d\u043a\u043e\u043d\u043e\u043c\u0438\u0442\u044c \u043d\u0430 \u0440\u0435\u043c\u043e\u043d\u0442\u0435 \u0434\u043e <span>300</span> \u0442\u044b\u0441\u044f\u0447 \u0440\u0443\u0431\u043b\u0435\u0439<br /> \u0438 <span>2</span> <span>\u043c\u0435\u0441\u044f\u0446\u0430</span> \u0432\u0440\u0435\u043c\u0435\u043d\u0438 \u043d\u0430 \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u0435 \u0440\u0430\u0431\u043e\u0442, \u0437\u0430\u043a\u0443\u043f\u043a\u0435 \u043e\u0442\u0434\u0435\u043b\u043e\u0447\u043d\u044b\u0445 \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u043e\u0432 \u0438 \u043f\u0440\u0435\u0434\u043c\u0435\u0442\u043e\u0432 \u0438\u043d\u0442\u0435\u0440\u044c\u0435\u0440\u0430"
+   },
+   "pk": "09a80af6e8351ad9e82832648ef09dfb"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u041c\u044b \u043f\u043e\u0434\u043a\u043b\u044e\u0447\u0430\u0435\u043c \u043a\u0430\u043c\u0435\u0440\u044b \u0441 \u043a\u0440\u0443\u0433\u043b\u043e\u0441\u0443\u0442\u043e\u0447\u043d\u043e\u0439 \u0442\u0440\u0430\u043d\u0441\u043b\u044f\u0446\u0438\u0435\u0439, \u0447\u0442\u043e\u0431\u044b \u0432\u044b \u043c\u043e\u0433\u043b\u0438 \u043d\u0430\u0431\u043b\u044e\u0434\u044f\u0442 \u0437\u0430 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u043e\u043c \u0440\u0435\u043c\u043e\u043d\u0442\u0430 \u0432 \u043b\u044e\u0431\u043e\u0435 \u0432\u0440\u0435\u043c\u044f"
+   },
+   "pk": "10728a427f688e901a338448a17bf2c2"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0421\u043e\u0437\u0434\u0430\u0451\u043c \u043a\u0440\u0430\u0441\u0438\u0432\u044b\u0435 \u0438 \u0444\u0443\u043d\u043a\u0446\u0438\u043e\u043d\u0430\u043b\u044c\u043d\u044b\u0435 \u0438\u043d\u0442\u0435\u0440\u044c\u0435\u0440\u044b<br /> \u0434\u043b\u044f \u043a\u0432\u0430\u0440\u0442\u0438\u0440 \u0438 \u0434\u043e\u043c\u043e\u0432, \u0432 \u043a\u043e\u0442\u043e\u0440\u044b\u0445 \u043a\u043e\u043c\u0444\u043e\u0440\u0442\u043d\u043e \u0436\u0438\u0442\u044c"
+   },
+   "pk": "15fe125b76b366de8ba7e140d650548e"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "&bull; 150 \u0432\u0438\u0434\u043e\u0432 \u043a\u0438\u0440\u043f\u0438\u0447\u0430"
+   },
+   "pk": "199313431dab38b66175b994b91f29ab"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u041e\u0446\u0435\u043d\u0438\u0442\u0435, \u043e\u0442 \u043a\u0430\u043a\u0438\u0445 \u0442\u0440\u0443\u0434\u043d\u043e\u0441\u0442\u0435\u0439 \u0432\u0430\u0441 \u043c\u043e\u0436\u0435\u0442 \u0438\u0437\u0431\u0430\u0432\u0438\u0442\u044c \u0434\u0438\u0437\u0430\u0439\u043d-\u043f\u0440\u043e\u0435\u043a\u0442"
+   },
+   "pk": "1ef640951bf533ffe36b2c486178b6a1"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0412\u044b\u0435\u0437\u0434 \u043d\u0430 \u043e\u0431\u044a\u0435\u043a\u0442 \u0441 \u0446\u0435\u043b\u044c\u044e \u043a\u043e\u043d\u0442\u0440\u043e\u043b\u044f \u0440\u0430\u0431\u043e\u0442.<br />\u0412\u043d\u0435\u0441\u0435\u043d\u0438\u0435 \u043a\u043e\u0440\u0440\u0435\u043a\u0442\u0438\u0432\u043e\u0432 \u0432 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0442 \u0447\u0435\u0440\u0442\u0435\u0436\u0435\u0439 \u0432 \u043f\u0440\u043e\u0446\u0435\u0441\u0441\u0435 \u0440\u0435\u043c\u043e\u043d\u0442\u0430 (\u043f\u043e\u0441\u043b\u0435 \u0434\u0435\u043c\u043e\u043d\u0442\u0430\u0436\u0430/\u043c\u043e\u043d\u0442\u0430\u0436\u0430 \u043f\u0435\u0440\u0435\u0433\u043e\u0440\u043e\u0434\u043e\u043a, \u0432\u044b\u0440\u0430\u0432\u043d\u0438\u0432\u0430\u043d\u0438\u044f \u043f\u043e\u043b\u043e\u0432, \u0441\u0442\u0435\u043d, \u043f\u043e\u0442\u043e\u043b\u043a\u043e\u0432.<br />\u041a\u043e\u043d\u0442\u0440\u043e\u043b\u044c \u0437\u0430 \u0432\u044b\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u0438\u0435\u043c \u0441\u0447\u0435\u0442\u043e\u0432 \u0438 \u043e\u0441\u0443\u0449\u0435\u0441\u0442\u0432\u043b\u0435\u043d\u0438\u044f \u043f\u043e\u0441\u0442\u0430\u0432\u043e\u043a (\u043e\u0442\u0434\u0435\u043b\u043e\u0447\u043d\u044b\u0445 \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u043e\u0432, \u043c\u0435\u0431\u0435\u043b\u0438, \u043e\u0431\u043e\u0440\u0443\u0434\u043e\u0432\u0430\u043d\u0438\u044f \u0438 \u0442.\u0434.)"
+   },
+   "pk": "25ad1e8de83ddbb0f18de62378805c6a"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u041f\u043e \u0440\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0430\u043d\u043d\u044b\u043c \u043d\u0430\u043c\u0438 \u043c\u0435\u0442\u043e\u0434\u0438\u043a\u0430\u043c \u0432\u044b\u044f\u0432\u043b\u044f\u0435\u043c \u0441\u0442\u0438\u043b\u044c \u0438\u043d\u0442\u0435\u0440\u044c\u0435\u0440\u0430 \u0438 \u0434\u0438\u0437\u0430\u0439\u043d\u0435\u0440\u0430, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u043b\u0443\u0447\u0448\u0435 \u0432\u0441\u0435\u0433\u043e \u0441\u043f\u0440\u0430\u0432\u0438\u0442\u0441\u044f \u0441 \u0432\u0430\u0448\u0435\u0439 \u0437\u0430\u0434\u0430\u0447\u0435\u0439. \u0417\u043d\u0430\u043a\u043e\u043c\u0438\u043c\u0441\u044f \u0441 \u0432\u0430\u043c\u0438 \u0438 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u043e\u0439, \u0444\u0438\u043a\u0441\u0438\u0440\u0443\u0435\u043c \u0440\u0430\u0437\u043c\u0435\u0440\u044b \u0438 \u0432\u0430\u0436\u043d\u044b\u0435 \u043e\u0441\u043e\u0431\u0435\u043d\u043d\u043e\u0441\u0442\u0438 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u044b \u043d\u0430 \u0447\u0435\u0440\u0442\u0435\u0436\u0435. \u0420\u0430\u0437\u0440\u0430\u0431\u0430\u0442\u044b\u0432\u0430\u0435\u043c \u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0432\u0430\u0440\u0438\u0430\u043d\u0442\u043e\u0432 \u043f\u043b\u0430\u043d\u0438\u0440\u043e\u0432\u043e\u043a \u0441 \u0443\u0447\u0435\u0442\u043e\u043c \u0432\u0430\u0448\u0438\u0445 \u043f\u043e\u0436\u0435\u043b\u0430\u043d\u0438\u0439 \u0438 \u0432\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u0435\u0439 \u043f\u0440\u043e\u0441\u0442\u0440\u0430\u043d\u0441\u0442\u0432\u0430."
+   },
+   "pk": "33a3ec2dc1144be1ae9aff2c5c2d1c7f"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "&middot; \u043f\u043b\u0430\u043d \u0441\u0430\u043d\u0442\u0435\u0445\u043d\u0438\u043a\u0438 \u0441 \u043f\u0440\u0438\u0432\u044f\u0437\u043a\u0430\u043c\u0438"
+   },
+   "pk": "3ad01fcfdb595cc405695c514ba084b1"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0420\u0435\u043c\u043e\u043d\u0442\u043d\u043e-\u043e\u0442\u0434\u0435\u043b\u043e\u0447\u043d\u044b\u0435<br />\u0440\u0430\u0431\u043e\u0442\u044b"
+   },
+   "pk": "442ef250cdf0b4252ca2098c4600372e"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0421\u0442\u043e\u0438\u043c\u043e\u0441\u0442\u044c \u0434\u0438\u0437\u0430\u0439\u043d-\u043f\u0440\u043e\u0435\u043a\u0442\u0430"
+   },
+   "pk": "447803e45fcdfb5b07b2749545600f74"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "3D \u0432\u0438\u0437\u0443\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u044f"
+   },
+   "pk": "5664075ffe47370ae2d2722bc218c684"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 \u0438 \u0432\u0435\u0434\u0435\u043d\u0438\u0435 \u043f\u0440\u043e\u0435\u043a\u0442\u043e\u0432 \u043e\u0442 \u044d\u0441\u043a\u0438\u0437\u0430 \u0434\u043e \u0432\u043e\u043f\u043b\u043e\u0449\u0435\u043d\u0438\u044f, \u043d\u0430\u0448\u0430 \u043a\u043e\u043c\u0430\u043d\u0434\u0430 \u044d\u0442\u043e \u043e\u0431\u044a\u0435\u0434\u0438\u043d\u0435\u043d\u0438\u0435 \u044d\u043a\u0441\u043f\u0435\u0440\u0442\u043e\u0432 \u0432 \u043e\u0431\u043b\u0430\u0441\u0442\u0438 \u0434\u0438\u0437\u0430\u0439\u043d\u0430 \u0438\u043d\u0442\u0435\u0440\u044c\u0435\u0440\u0430 \u0438 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0441\u043d\u043e\u0433\u043e \u0440\u0435\u043c\u043e\u043d\u0442\u0430"
+   },
+   "pk": "5689466a2cd11766b22c09253ae0217b"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0422\u043e\u0447\u043d\u044b\u0439 \u0441\u0440\u043e\u043a \u043e\u043a\u043e\u043d\u0447\u0430\u043d\u0438\u044f \u0440\u0430\u0431\u043e\u0442"
+   },
+   "pk": "5b40a59890001ba02f66bcd4c8458e8d"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "&middot; \u043f\u043b\u0430\u043d \u0434\u0435\u043c\u043e\u043d\u0442\u0438\u0440\u0443\u0435\u043c\u044b\u0445 \u043f\u0435\u0440\u0435\u0433\u043e\u0440\u043e\u0434\u043e\u043a"
+   },
+   "pk": "60dff39aa886746ae9c8235a896d78ab"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "&middot; \u043f\u043b\u0430\u043d \u0432\u043e\u0437\u0432\u043e\u0434\u0438\u043c\u044b\u0445 \u043f\u0435\u0440\u0435\u0433\u043e\u0440\u043e\u0434\u043e\u043a"
+   },
+   "pk": "72ff2d36370fb63ab83f54af25320621"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0412\u044b\u0431\u043e\u0440 \u0434\u0435\u043a\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u044b\u0445 \u044d\u043b\u0435\u043c\u0435\u043d\u0442\u043e\u0432 \u0438 \u0430\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u043e\u0432<br />\u041f\u043e\u0434\u0431\u043e\u0440 \u043d\u0430\u0441\u0442\u043e\u043b\u044c\u043d\u044b\u0445 \u043b\u0430\u043c\u043f, \u0442\u043e\u0440\u0448\u0435\u0440\u043e\u0432 \u0438 \u0442.\u043f.<br />\u041f\u043e\u0434\u0431\u043e\u0440 \u0442\u0435\u043a\u0441\u0442\u0438\u043b\u044f, \u0448\u0442\u043e\u0440, \u0433\u0430\u0440\u0434\u0438\u043d \u0440\u043e\u043b\u0435\u0442\u043e\u0432 \u0438 \u0436\u0430\u043b\u044e\u0437\u0438<br />\u041f\u043e\u0434\u0431\u043e\u0440 \u043f\u043e\u0441\u0442\u0435\u043b\u044c\u043d\u043e\u0433\u043e \u0431\u0435\u043b\u044c\u044f, \u043f\u043e\u043a\u0440\u044b\u0432\u0430\u043b, \u0434\u0435\u043a\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u044b\u0445 \u043f\u043e\u0434\u0443\u0448\u0435\u043a \u0438 \u0441\u043a\u0430\u0442\u0435\u0440\u0442\u0435\u0439<br />\u041f\u043e\u0434\u0431\u043e\u0440 \u043a\u0430\u0440\u0442\u0438\u043d, , \u0432\u0430\u0437 \u0438 \u0434\u0440\u0443\u0433\u0438\u0445 \u0430\u043a\u0441\u0435\u0441\u0441\u0443\u0430\u0440\u043e\u0432<br />\u041f\u043e\u0434\u0431\u043e\u0440 \u043f\u043e\u0441\u0443\u0434\u044b, \u043a\u0435\u0440\u0430\u043c\u0438\u043a\u0438 \u0438 \u0442.\u043f."
+   },
+   "pk": "7389238974bafbf50e2951364f86cfdb"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "&bull; 70 \u0432\u0438\u0434\u043e\u0432 \u0441\u0442\u0435\u043d\u043e\u0432\u044b\u0445 \u043f\u0430\u043d\u0435\u043b\u0435\u0439"
+   },
+   "pk": "73968e7339eaab5aa29a93faf48da58a"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u041c\u043e\u0436\u043d\u043e \u043d\u0435 \u0442\u043e\u0447\u043d\u043e \u0440\u0430\u0441\u0441\u0447\u0438\u0442\u0430\u0442\u044c \u043c\u0430\u0442\u0435\u0440\u0438\u0430\u043b\u044b \u0438 \u043c\u043e\u0433\u0443\u0442 \u0432\u043e\u0437\u043d\u0438\u043a\u043d\u0443\u0442\u044c \u0441\u043b\u043e\u0436\u043d\u043e\u0441\u0442\u0438 \u043f\u043e \u0445\u043e\u0434\u0443 \u0440\u0435\u043c\u043e\u043d\u0442\u0430 \u0432 \u043e\u0442\u043b\u0438\u0447\u0438\u0438 \u043e\u0442 \u0440\u0435\u043c\u043e\u043d\u0442\u0430 \u043f\u043e \u0434\u0438\u0437\u0430\u0439\u043d \u043f\u0440\u043e\u0435\u043a\u0442\u0443 \u0433\u0434\u0435 \u0441\u0442\u043e\u0438\u043c\u043e\u0441\u0442\u044c \u0444\u0438\u043a\u0441\u0438\u0440\u0443\u0435\u0442\u0441\u044f"
+   },
+   "pk": "7416c486f2f5316a84106a6a1e3cec85"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0420\u0435\u043c\u043e\u043d\u0442 \u043f\u043e \u0434\u0438\u0437\u0430\u0439\u043d \u043f\u0440\u043e\u0435\u043a\u0442\u0443"
+   },
+   "pk": "7bcca702a70b2e65c490ea87f57b94a8"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u041f\u043e\u0434\u043a\u043b\u044e\u0447\u0430\u0435\u043c \u043a\u0430\u043c\u0435\u0440\u044b \u0441 \u043a\u0440\u0443\u0433\u043b\u043e\u0441\u0443\u0442\u043e\u0447\u043d\u043e\u0439 \u0442\u0440\u0430\u043d\u0441\u043b\u044f\u0446\u0438\u0435\u0439, \u0447\u0442\u043e\u0431\u044b \u0432\u044b \u043c\u043e\u0433\u043b\u0438 \u0441\u043c\u043e\u0442\u0440\u0435\u0442\u044c \u043a\u0430\u043a \u043f\u0440\u043e\u0438\u0441\u0445\u043e\u0434\u0438\u0442 \u0440\u0435\u043c\u043e\u043d\u0442 \u0432 \u0432\u0430\u0448\u0435\u0439 \u043a\u0432\u0430\u0440\u0442\u0438\u0440\u0435 \u0432 \u043b\u044e\u0431\u043e\u0435 \u0432\u0440\u0435\u043c\u044f"
+   },
+   "pk": "8844bc417e52dda79cf4c3cd16526c79"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0421\u043e\u0437\u0434\u0430\u0451\u043c \u043a\u043e\u043d\u0446\u0435\u043f\u0446\u0438\u044e"
+   },
+   "pk": "95677606c7f8cdd39688608a2899c603"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0427\u0442\u043e\u0431\u044b \u0432\u044b \u043f\u043e\u043b\u0443\u0447\u0430\u043b\u0438 \u043b\u0443\u0447\u0448\u0435\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u043e \u0440\u0430\u0431\u043e\u0442, \u043c\u044b \u0440\u0430\u0431\u043e\u0442\u0430\u0435\u043c \u0432 \u043a\u043e\u043c\u043f\u043b\u0435\u043a\u0441\u0435"
+   },
+   "pk": "975ccf554f063531cfbcf0663c4f1fd3"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0412\u043e\u0437\u043c\u043e\u0436\u043d\u043e\u0441\u0442\u044c \u0432\u0438\u0434\u0435\u043e\u043d\u0430\u0431\u043b\u044e\u0434\u0435\u043d\u0438\u044f"
+   },
+   "pk": "a5f369e82a8529e5414f4726b20caab6"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "&middot; \u041a\u043e\u043d\u0441\u0443\u043b\u044c\u0442\u0430\u0446\u0438\u044f \u0434\u0438\u0437\u0430\u0439\u043d\u0435\u0440\u0430<br />&middot; \u0421\u043e\u0441\u0442\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u0442\u0435\u0445\u043d\u0438\u0447\u0435\u0441\u043a\u043e\u0433\u043e \u0437\u0430\u0434\u0430\u043d\u0438\u044f<br />&middot; \u0412\u044b\u0435\u0437\u0434 \u043d\u0430 \u0437\u0430\u043c\u0435\u0440<br />&middot; \u041f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u043a\u0430 \u043e\u0431\u043c\u0435\u0440\u043d\u043e\u0433\u043e \u043f\u043b\u0430\u043d\u0430<br />&middot; \u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u043a\u0430 \u043f\u043b\u0430\u043d\u0438\u0440\u043e\u0432\u043e\u0447\u043d\u044b\u0445 \u0440\u0435\u0448\u0435\u043d\u0438\u0439 (2-3 \u0432\u0430\u0440\u0438\u0430\u043d\u0442\u0430)<br />&middot; \u041f\u043e\u0434\u0433\u043e\u0442\u043e\u0432\u043a\u0430 \u043f\u0430\u043a\u0435\u0442\u0430 \u0447\u0435\u0440\u0442\u0435\u0436\u0435\u0439 \u0434\u043b\u044f \u0441\u0442\u0440\u043e\u0438\u0442\u0435\u043b\u044c\u0441\u0442\u0432\u0430:"
+   },
+   "pk": "ab2c2c7d187fde47a51c8d9295c48547"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "&middot; \u042d\u0441\u043a\u0438\u0437\u043d\u044b\u0439 \u043f\u0440\u043e\u0435\u043a\u0442<br />&middot; \u0414\u0435\u043c\u043e\u043d\u0442\u0430\u0436<br />&middot; \u0417\u0430\u043c\u0435\u043d\u0430 \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u043a\u0438<br />&middot; \u0427\u0430\u0441\u0442\u0438\u0447\u043d\u0430\u044f \u0437\u0430\u043c\u0435\u043d\u0430 \u0442\u0440\u0443\u0431 \u0432\u043e\u0434\u043e\u0441\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u044f<br />&middot; \u0412\u044b\u0440\u0430\u0432\u043d\u0438\u0432\u0430\u043d\u0438\u0435 \u043f\u043e\u043b\u0430<br />&middot; \u041c\u043e\u043d\u0442\u0430\u0436 \u043f\u0435\u0440\u0435\u0433\u043e\u0440\u043e\u0434\u043e\u043a<br />&middot; \u0412\u044b\u0440\u0430\u0432\u043d\u0438\u0432\u0430\u043d\u0438\u0435 \u0441\u0442\u0435\u043d \u0438 \u043f\u043e\u0442\u043e\u043b\u043a\u043e\u0432<br />&middot; \u041c\u043e\u043d\u0442\u0430\u0436 \u043f\u043e\u0442\u043e\u043b\u043e\u0447\u043d\u044b\u0445 \u043a\u0430\u0440\u043d\u0438\u0437\u043e\u0432<br />&middot; \u0423\u043a\u043b\u0430\u0434\u043a\u0430 \u043f\u043b\u0438\u0442\u043a\u0438<br />&middot; \u0423\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0441\u0430\u043d\u0442\u0435\u0445\u043d\u0438\u043a\u0438<br />&middot; \u0423\u043a\u043b\u0430\u0434\u043a\u0430 \u043b\u0430\u043c\u0438\u043d\u0430\u0442\u0430 \u0438 \u043f\u0430\u0440\u043a\u0435\u0442\u043d\u043e\u0439 \u0434\u043e\u0441\u043a\u0438<br />&middot; \u0423\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e \u043f\u043e\u0442\u043e\u043b\u043a\u043e\u0432 \u0438 \u0413\u041a\u041b (\u043e\u0434\u0438\u043d \u0443\u0440\u043e\u0432\u0435\u043d\u044c)<br />&middot; \u041f\u043e\u043a\u043b\u0435\u0439\u043a\u0430 \u043e\u0431\u043e\u0435\u0432 (\u0432\u0438\u043d\u0438\u043b, \u0444\u043b\u0438\u0437\u0435\u043b\u0438\u043d)<br />&middot; \u0423\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u043c\u0435\u0436\u043a\u043e\u043c\u043d\u0430\u0442\u043d\u044b\u0445 \u0434\u0432\u0435\u0440\u0435\u0439"
+   },
+   "pk": "b12ea8010e6d8578e1f6c7317277a497"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0414\u0435\u043a\u043e\u0440\u0438\u0440\u043e\u0432\u0430\u043d\u0438\u0435"
+   },
+   "pk": "b51d69e46c5a17247db399b46c685826"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u041c\u0435\u0431\u0435\u043b\u044c\u043d\u044b\u0435 \u0442\u0443\u0440\u044b \u0432 \u041a\u0438\u0442\u0430\u0439"
+   },
+   "pk": "b6e65dd9f9ed2426c61d336b8a7fa196"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "+7 (495) 367 - 52 - 49"
+   },
+   "pk": "b89877f46b6b5001112851208764eb13"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "&middot; \u041f\u043b\u0430\u043d \u0440\u0430\u0441\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0438 \u043c\u0435\u0431\u0435\u043b\u0438"
+   },
+   "pk": "c3eb7d02fa9dd97d922f99857c88cd5f"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0427\u0442\u043e\u0431\u044b \u0435\u0433\u043e \u043f\u043e\u043b\u0443\u0447\u0438\u0442\u044c, \u043f\u0440\u043e\u0439\u0434\u0438\u0442\u0435 \u043d\u0435\u0431\u043e\u043b\u044c\u0448\u043e\u0439 \u0442\u0435\u0441\u0442, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u043f\u043e\u043a\u0430\u0436\u0435\u0442 \u0441\u0442\u043e\u0438\u043c\u043e\u0441\u0442\u044c \u0438 \u0432\u0440\u0435\u043c\u044f \u0440\u0435\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438 \u043f\u0440\u043e\u0435\u043a\u0442\u0430"
+   },
+   "pk": "c40c41b099edeb16e2aeba4d8aa140a7"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u041e\u0431\u044b\u0447\u043d\u044b\u0439 \u0440\u0435\u043c\u043e\u043d\u0442"
+   },
+   "pk": "c8ff050d431bca72b695b0484cb65526"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0420\u0430\u0437\u0440\u0430\u0431\u043e\u0442\u0430\u0435\u043c \u0434\u0438\u0437\u0430\u0439\u043d-\u043f\u0440\u043e\u0435\u043a\u0442, \u043a\u043e\u0442\u043e\u0440\u044b\u0439 \u0431\u0443\u0434\u0435\u0442 \u0442\u043e\u0447\u043d\u044b\u043c <br />\u043e\u0442\u0440\u0430\u0436\u0435\u043d\u0438\u0435\u043c \u0432\u0430\u0448\u0438\u0445 \u0436\u0435\u043b\u0430\u043d\u0438\u0439."
+   },
+   "pk": "cb9127adfbe522bf6c72b8e4fa09b6b4"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "&middot; \u0427\u0435\u0440\u0442\u0435\u0436\u043d\u044b\u0439 \u043f\u0440\u043e\u0435\u043a\u0442 (\u043f\u043b\u0430\u043d\u0438\u0440\u043e\u0432\u043e\u0447\u043d\u043e\u0435 \u0440\u0435\u0448\u0435\u043d\u0438\u0435 \u043f\u043e \u0411\u0422\u0418, \u0431\u0435\u0437 \u0438\u0437\u043c\u0435\u043d\u0435\u043d\u0438\u0439)<br />&middot; \u042d\u043b\u0435\u043a\u0442\u0440\u043e\u043c\u043e\u043d\u0442\u0430\u0436\u043d\u044b\u0435 \u0440\u0430\u0431\u043e\u0442\u044b<br />&middot; \u041c\u043e\u043d\u0442\u0430\u0436 \u0442\u0440\u0443\u0431 \u0432\u043e\u0434\u043e\u0441\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u044f \u0438 \u043a\u0430\u043d\u0430\u043b\u0438\u0437\u0430\u0446\u0438\u0438<br />&middot; \u0412\u044b\u0440\u0430\u0432\u043d\u0438\u0432\u0430\u043d\u0438\u0435 \u043f\u043e\u043b\u0430<br />&middot; \u041c\u043e\u043d\u0442\u0430\u0436 \u043f\u0435\u0440\u0435\u0433\u043e\u0440\u043e\u0434\u043e\u043a<br />&middot; \u0412\u044b\u0440\u0430\u0432\u043d\u0438\u0432\u0430\u043d\u0438\u0435 \u0441\u0442\u0435\u043d \u0438 \u043f\u043e\u0442\u043e\u043b\u043a\u043e\u0432<br />&middot; \u041c\u043e\u043d\u0442\u0430\u0436 \u043f\u043e\u0442\u043e\u043b\u043e\u0447\u043d\u044b\u0445 \u043a\u0430\u0440\u043d\u0438\u0437\u043e\u0432<br />&middot; \u0423\u043a\u043b\u0430\u0434\u043a\u0430 \u043f\u043b\u0438\u0442\u043a\u0438<br />&middot; \u0423\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0441\u0430\u043d\u0442\u0435\u0445\u043d\u0438\u043a\u0438<br />&middot; \u0423\u043a\u043b\u0430\u0434\u043a\u0430 \u043b\u0430\u043c\u0438\u043d\u0430\u0442\u0430 \u043d\u0430 \u043f\u043e\u0434\u043b\u043e\u0436\u043a\u0443<br />&middot; \u0423\u043a\u043b\u0430\u0434\u043a\u0430 \u043a\u0435\u0440\u0430\u043c\u043e\u0433\u0440\u0430\u043d\u0438\u0442\u0430, \u043f\u043b\u0438\u0442\u043a\u0438, \u043c\u043e\u0437\u0430\u0439\u043a\u0438<br />&middot; \u0423\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0441\u0430\u043d\u0442\u0435\u0445\u043d\u0438\u043a\u0438<br />&middot; \u041f\u043e\u043a\u043b\u0435\u0439\u043a\u0430 \u043e\u0431\u043e\u0435\u0432 (\u0412\u0438\u043d\u0438\u043b, \u0444\u043b\u0438\u0437\u0438\u043b\u0438\u043d)<br />&middot; \u0423\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u043c\u0435\u0436\u043a\u043e\u043c\u043d\u0430\u0442\u043d\u044b\u0445 \u0434\u0432\u0435\u0440\u0435\u0439<br />&middot; \u041f\u043e\u043b\u044b: \u043b\u0430\u043c\u0438\u043d\u0430\u0442 33 \u043a\u043b\u0430\u0441\u0441\u0430, \u043a\u0435\u0440\u0430\u043c\u043e\u0433\u0440\u0430\u043d\u0438\u0442 (\u043a\u0443\u0445\u043d\u044f, \u043f\u0440\u0438\u0445\u043e\u0436\u0430\u044f)<br />&middot; \u041f\u043e\u0442\u043e\u043b\u043a\u0438: \u043f\u043e\u043a\u0440\u0430\u0441\u043a\u0430<br />&middot; \u0421\u0442\u0435\u043d\u044b: \u043e\u0431\u043e\u0438 \u0432\u0438\u043d\u0438\u043b\u043e\u0432\u044b\u0435 \u043d\u0430 \u0444\u043b\u0438\u0437\u0435\u043b\u0438\u043d\u043e\u0432\u043e\u0439 \u043e\u0441\u043d\u043e\u0432\u0435, \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u0420\u043e\u0441\u0441\u0438\u044f<br />&middot; \u0421\u0430\u043d\u0443\u0437\u043b\u044b: \u043f\u043b\u0438\u0442\u043a\u0430 \u043f\u0440\u043e\u0438\u0437\u0432\u043e\u0434\u0441\u0442\u0432\u043e \u0420\u043e\u0441\u0441\u0438\u044f, \u0443\u043d\u0438\u0442\u0430\u0437, \u043f\u043e\u043b\u043e\u0442\u0435\u043d\u0446\u0435\u0441\u0443\u0448\u0438\u0442\u0435\u043b\u044c, \u0440\u0430\u043a\u043e\u0432\u0438\u043d\u0430, \u0432\u0430\u043d\u043d\u0430, \u0441\u043c\u0435\u0441\u0438\u0442\u0435\u043b\u0438"
+   },
+   "pk": "ce324674706c484dcc7273dc35ffe26d"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0421\u0440\u043e\u043a\u0438 \u043d\u0435 \u043e\u043f\u0440\u0435\u0434\u0435\u043b\u0438\u0442\u044c"
+   },
+   "pk": "dadb57502f28d5114763536ba70a7c41"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u042d\u0442\u043e \u0432\u0441\u0451 \u043f\u0440\u0435\u043a\u0440\u0430\u0441\u043d\u043e, \u043d\u043e \u0441\u043b\u0438\u0448\u043a\u043e\u043c \u0434\u043e\u0440\u043e\u0433\u043e - \u044d\u0442\u043e \u043d\u0435 \u0442\u0430\u043a!"
+   },
+   "pk": "dbf3dc6cd4e5949acbb46cc4e93a2334"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0421\u043e\u0447\u0435\u0442\u0430\u044f \u0431\u043e\u0433\u0430\u0442\u0435\u0439\u0448\u0438\u0439 \u043e\u043f\u044b\u0442 \u0438 <br />\u0441\u043e\u0432\u0440\u0435\u043c\u0435\u043d\u043d\u044b\u0435 \u0442\u0435\u0445\u043d\u043e\u043b\u043e\u0433\u0438\u0438, \u043a <br />\u0441\u0435\u0433\u043e\u0434\u043d\u044f\u0448\u043d\u0435\u043c\u0443 \u0434\u043d\u044e \u043a\u0438\u0442\u0430\u0439\u0441\u043a\u0438\u0435 <br />\u043c\u0435\u0431\u0435\u043b\u044c\u0449\u0438\u043a\u0438 \u0434\u043e\u0441\u0442\u0438\u0433\u043b\u0438 \u0432\u044b\u0441\u043e\u0447\u0430\u0439\u0448\u0435\u0433\u043e <br />\u043c\u0430\u0441\u0442\u0435\u0440\u0441\u0442\u0432\u0430 \u0432 \u0441\u0432\u043e\u0435\u043c \u0434\u0435\u043b\u0435."
+   },
+   "pk": "de0b1bd7481c8d88f8948ede68c4296a"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "&middot; \u042d\u0441\u043a\u0438\u0437\u043d\u044b\u0439 \u043f\u0440\u043e\u0435\u043a\u0442<br />&middot; \u0414\u0435\u043c\u043e\u043d\u0442\u0430\u0436\u043d\u044b\u0435 \u0440\u0430\u0431\u043e\u0442\u044b<br />&middot; \u041c\u043e\u043d\u0442\u0430\u0436 \u043f\u0435\u0440\u0435\u0433\u043e\u0440\u043e\u0434\u043e\u043a<br />&middot; \u0423\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e \u0432\u0435\u043d\u0442\u0438\u043b\u044f\u0446\u0438\u0438<br />&middot; \u041c\u043e\u043d\u0442\u0430\u0436 \u044d\u043b\u0435\u043a\u0442\u0440\u043e\u043f\u0440\u043e\u0432\u043e\u0434\u043a\u0438<br />&middot; \u041c\u043e\u043d\u0442\u0430\u0436 \u0442\u0440\u0443\u0431 \u0432\u043e\u0434\u043e\u0441\u043d\u0430\u0431\u0436\u0435\u043d\u0438\u044f<br />&middot; \u0412\u044b\u0440\u0430\u0432\u043d\u0438\u0432\u0430\u043d\u0438\u0435 \u043f\u043e\u043b\u0430 (\u0441\u0442\u044f\u0436\u043a\u0430 5-12\u0441\u043c)<br />&middot; \u0423\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e \u0448\u0443\u043c\u043e\u0438\u0437\u043e\u043b\u044f\u0446\u0438\u0438<br />&middot; \u0412\u044b\u0440\u0430\u0432\u043d\u0438\u0432\u0430\u043d\u0438\u0435 \u0441\u0442\u0435\u043d \u0438 \u043f\u043e\u0442\u043e\u043b\u043a\u043e\u0432<br />&middot; \u041c\u043e\u043d\u0442\u0430\u0436 \u043f\u043e\u0442\u043e\u043b\u043e\u0447\u043d\u044b\u0445 \u043a\u0430\u0440\u043d\u0438\u0437\u043e\u0432<br />&middot; \u0423\u043a\u043b\u0430\u0434\u043a\u0430 \u043a\u0435\u0440\u0430\u043c\u043e\u0433\u0440\u0430\u043d\u0438\u0442\u0430, \u043f\u043b\u0438\u0442\u043a\u0438, \u043c\u043e\u0437\u0430\u0439\u043a\u0438<br />&middot; \u0423\u0441\u0442\u0430\u043d\u043e\u0432\u043a\u0430 \u0441\u0430\u043d\u0442\u0435\u0445\u043d\u0438\u043a\u0438<br />&middot; \u0423\u043a\u043b\u0430\u0434\u043a\u0430 \u043f\u0430\u0440\u043a\u0435\u0442\u0430 \u0438 \u043f\u0430\u0440\u043a\u0435\u0442\u043d\u043e\u0439 \u0434\u043e\u0441\u043a\u0438<br />&middot; \u0423\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e \u043f\u043e\u0442\u043e\u043b\u043a\u043e\u0432 \u0438 \u0413\u041a\u041b (\u043d\u0435\u0441\u043a\u043e\u043b\u044c\u043a\u043e \u0443\u0440\u043e\u0432\u043d\u0435\u0439, \u043a\u0440\u0438\u0432\u043e\u043b\u0438\u043d\u0435\u0439\u043d\u044b\u0435)<br />&middot; \u041f\u043e\u043a\u043b\u0435\u0439\u043a\u0430 \u043e\u0431\u043e\u0435\u0432 (\u043b\u044e\u0431\u044b\u0435 \u0432\u0438\u0434\u044b)<br />&middot; \u0417\u0430\u043c\u0435\u043d\u0430 \u044d\u043b\u0435\u043a\u0442\u0440\u0438\u043a\u0438<br />&middot; \u041e\u043a\u0440\u0430\u0441\u043a\u0430 \u0441\u0442\u0435\u043d \u0438 \u043f\u043e\u0442\u043e\u043b\u043a\u043e\u0432<br />&middot; \u041c\u043e\u043d\u0442\u0430\u0436 \u0434\u0432\u0435\u0440\u0435\u0439<br />&middot; \u0423\u0441\u0442\u0440\u043e\u0439\u0441\u0442\u0432\u043e \u0442\u0435\u043f\u043b\u044b\u0445 \u043f\u043e\u043b\u043e\u0432<br />&middot; \u0423\u0442\u0435\u043f\u043b\u0435\u043d\u0438\u0435 \u043b\u043e\u0434\u0436\u0438\u0439 \u0438 \u0431\u0430\u043b\u043a\u043e\u043d\u043e\u0432<br />&middot; \u0414\u0435\u043a\u043e\u0440\u0430\u0442\u0438\u0432\u043d\u0430\u044f \u043e\u0442\u0434\u0435\u043b\u043a\u0430 \u0441\u0442\u0435\u043d"
+   },
+   "pk": "e874dd54f6d2b9ad8f4daca5781de0c5"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "&bull; 340 \u0432\u0438\u0434\u043e\u0432 \u043f\u043b\u0438\u0442\u043a\u0438"
+   },
+   "pk": "ed02a613a8036c75cbdac40b62d0a475"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u041a\u0430\u0436\u0434\u044b\u0439 \u043d\u0430\u0448 \u0434\u0438\u0437\u0430\u0439\u043d\u0435\u0440 \u0438\u043d\u0442\u0435\u0440\u044c\u0435\u0440\u0430 \u0438\u043c\u0435\u0435\u0442 \u0443\u0437\u043a\u043e\u043f\u0440\u043e\u0444\u0438\u043b\u044c\u043d\u043e\u0435 <br /> \u0432\u044b\u0441\u0448\u0435\u0435 \u043e\u0431\u0440\u0430\u0437\u043e\u0432\u0430\u043d\u0438\u0435 \u0438 \u043e\u043f\u044b\u0442 \u0440\u0430\u0431\u043e\u0442\u044b \u0431\u043e\u043b\u0435\u0435 5 \u043b\u0435\u0442"
+   },
+   "pk": "f4cf233d2f29b41c2b20f79d8092d65a"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0421\u0442\u043e\u0438\u043c\u043e\u0441\u0442\u044c \u043c\u043e\u0436\u0435\u0442 \u0432\u0430\u0440\u044c\u0438\u0440\u043e\u0432\u0430\u0442\u044c\u0441\u044f"
+   },
+   "pk": "f7f97514806ba33246f1568f2c0dba6c"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0413\u0440\u0430\u043c\u043e\u0442\u043d\u043e\u0435, \u043f\u043e\u0448\u0430\u0433\u043e\u0432\u043e\u0435 \u0432\u044b\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u0435 \u0440\u0430\u0431\u043e\u0442, \u043e\u0431\u0435\u0441\u043f\u0435\u0447\u0438\u0432\u0430\u044e\u0449\u0435\u0435 \u043a\u0430\u0447\u0435\u0441\u0442\u0432\u0435\u043d\u043d\u043e\u0435 \u0438\u0441\u043f\u043e\u043b\u043d\u0435\u043d\u0438\u0435. \u0412\u0441\u0435 \u0440\u0435\u043c\u043e\u043d\u0442\u043d\u043e-\u043e\u0442\u0434\u0435\u043b\u043e\u0447\u043d\u044b\u0435 \u0440\u0430\u0431\u043e\u0442\u044b \u0442\u0435\u0441\u043d\u043e \u0432\u0437\u0430\u0438\u043c\u043e\u0441\u0432\u044f\u0437\u0430\u043d\u044b \u0438 \u0438\u043c\u0435\u044e\u0442 \u0441\u0442\u0440\u043e\u0433\u0443\u044e \u043f\u043e\u0441\u043b\u0435\u0434\u043e\u0432\u0430\u0442\u0435\u043b\u044c\u043d\u043e\u0441\u0442\u044c."
+   },
+   "pk": "fd6080a90bffb9df4a8333992b116cb0"
+},
+{
+   "model": "addendum.snippet",
+   "fields": {
+      "text": "\u0414\u0438\u0437\u0430\u0439\u043d \u0440\u0435\u043c\u043e\u043d\u0442\u043d\u044b\u0435 \u0440\u0430\u0431\u043e\u0442\u044b \u0432\u043e \u0412\u043b\u0430\u0434\u0438\u0432\u043e\u0441\u0442\u043e\u043a\u0435"
+   },
+   "pk": "head"
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can add log entry",
+      "content_type": 1,
+      "codename": "add_logentry"
+   },
+   "pk": 1
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can change log entry",
+      "content_type": 1,
+      "codename": "change_logentry"
+   },
+   "pk": 2
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can delete log entry",
+      "content_type": 1,
+      "codename": "delete_logentry"
+   },
+   "pk": 3
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can add permission",
+      "content_type": 2,
+      "codename": "add_permission"
+   },
+   "pk": 4
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can change permission",
+      "content_type": 2,
+      "codename": "change_permission"
+   },
+   "pk": 5
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can delete permission",
+      "content_type": 2,
+      "codename": "delete_permission"
+   },
+   "pk": 6
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can add group",
+      "content_type": 3,
+      "codename": "add_group"
+   },
+   "pk": 7
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can change group",
+      "content_type": 3,
+      "codename": "change_group"
+   },
+   "pk": 8
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can delete group",
+      "content_type": 3,
+      "codename": "delete_group"
+   },
+   "pk": 9
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can add user",
+      "content_type": 4,
+      "codename": "add_user"
+   },
+   "pk": 10
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can change user",
+      "content_type": 4,
+      "codename": "change_user"
+   },
+   "pk": 11
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can delete user",
+      "content_type": 4,
+      "codename": "delete_user"
+   },
+   "pk": 12
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can add content type",
+      "content_type": 5,
+      "codename": "add_contenttype"
+   },
+   "pk": 13
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can change content type",
+      "content_type": 5,
+      "codename": "change_contenttype"
+   },
+   "pk": 14
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can delete content type",
+      "content_type": 5,
+      "codename": "delete_contenttype"
+   },
+   "pk": 15
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can add session",
+      "content_type": 6,
+      "codename": "add_session"
+   },
+   "pk": 16
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can change session",
+      "content_type": 6,
+      "codename": "change_session"
+   },
+   "pk": 17
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can delete session",
+      "content_type": 6,
+      "codename": "delete_session"
+   },
+   "pk": 18
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can add \u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f \u0432 \u043f\u043e\u0440\u0442\u0444\u043e\u043b\u0438\u043e",
+      "content_type": 8,
+      "codename": "add_projectcategory"
+   },
+   "pk": 22
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can change \u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f \u0432 \u043f\u043e\u0440\u0442\u0444\u043e\u043b\u0438\u043e",
+      "content_type": 8,
+      "codename": "change_projectcategory"
+   },
+   "pk": 23
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can delete \u041a\u0430\u0442\u0435\u0433\u043e\u0440\u0438\u044f \u0432 \u043f\u043e\u0440\u0442\u0444\u043e\u043b\u0438\u043e",
+      "content_type": 8,
+      "codename": "delete_projectcategory"
+   },
+   "pk": 24
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can add \u0421\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a",
+      "content_type": 9,
+      "codename": "add_stuff"
+   },
+   "pk": 25
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can change \u0421\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a",
+      "content_type": 9,
+      "codename": "change_stuff"
+   },
+   "pk": 26
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can delete \u0421\u043e\u0442\u0440\u0443\u0434\u043d\u0438\u043a",
+      "content_type": 9,
+      "codename": "delete_stuff"
+   },
+   "pk": 27
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can add \u0424\u043e\u0442\u043e \u0441\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0430",
+      "content_type": 10,
+      "codename": "add_stuffimage"
+   },
+   "pk": 28
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can change \u0424\u043e\u0442\u043e \u0441\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0430",
+      "content_type": 10,
+      "codename": "change_stuffimage"
+   },
+   "pk": 29
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can delete \u0424\u043e\u0442\u043e \u0441\u0442\u0440\u0443\u0434\u043d\u0438\u043a\u0430",
+      "content_type": 10,
+      "codename": "delete_stuffimage"
+   },
+   "pk": 30
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can add snippet",
+      "content_type": 11,
+      "codename": "add_snippet"
+   },
+   "pk": 31
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can change snippet",
+      "content_type": 11,
+      "codename": "change_snippet"
+   },
+   "pk": 32
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can delete snippet",
+      "content_type": 11,
+      "codename": "delete_snippet"
+   },
+   "pk": 33
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can add snippet translation",
+      "content_type": 12,
+      "codename": "add_snippettranslation"
+   },
+   "pk": 34
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can change snippet translation",
+      "content_type": 12,
+      "codename": "change_snippettranslation"
+   },
+   "pk": 35
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can delete snippet translation",
+      "content_type": 12,
+      "codename": "delete_snippettranslation"
+   },
+   "pk": 36
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can add \u041e\u0442\u0437\u044b\u0432",
+      "content_type": 13,
+      "codename": "add_replies"
+   },
+   "pk": 37
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can change \u041e\u0442\u0437\u044b\u0432",
+      "content_type": 13,
+      "codename": "change_replies"
+   },
+   "pk": 38
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can delete \u041e\u0442\u0437\u044b\u0432",
+      "content_type": 13,
+      "codename": "delete_replies"
+   },
+   "pk": 39
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can add \u0424\u043e\u0442\u043e \u043d\u0430 \u043e\u0442\u0437\u044b\u0432",
+      "content_type": 14,
+      "codename": "add_repliesimage"
+   },
+   "pk": 40
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can change \u0424\u043e\u0442\u043e \u043d\u0430 \u043e\u0442\u0437\u044b\u0432",
+      "content_type": 14,
+      "codename": "change_repliesimage"
+   },
+   "pk": 41
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can delete \u0424\u043e\u0442\u043e \u043d\u0430 \u043e\u0442\u0437\u044b\u0432",
+      "content_type": 14,
+      "codename": "delete_repliesimage"
+   },
+   "pk": 42
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can add \u041f\u0440\u043e\u0435\u043a\u0442 \u0432 \u043f\u043e\u0440\u0442\u0444\u043e\u043b\u0438\u043e",
+      "content_type": 15,
+      "codename": "add_projectimage"
+   },
+   "pk": 43
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can change \u041f\u0440\u043e\u0435\u043a\u0442 \u0432 \u043f\u043e\u0440\u0442\u0444\u043e\u043b\u0438\u043e",
+      "content_type": 15,
+      "codename": "change_projectimage"
+   },
+   "pk": 44
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can delete \u041f\u0440\u043e\u0435\u043a\u0442 \u0432 \u043f\u043e\u0440\u0442\u0444\u043e\u043b\u0438\u043e",
+      "content_type": 15,
+      "codename": "delete_projectimage"
+   },
+   "pk": 45
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can add \u0417\u0430\u044f\u0432\u043a\u0430",
+      "content_type": 16,
+      "codename": "add_order"
+   },
+   "pk": 46
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can change \u0417\u0430\u044f\u0432\u043a\u0430",
+      "content_type": 16,
+      "codename": "change_order"
+   },
+   "pk": 47
+},
+{
+   "model": "auth.permission",
+   "fields": {
+      "name": "Can delete \u0417\u0430\u044f\u0432\u043a\u0430",
+      "content_type": 16,
+      "codename": "delete_order"
+   },
+   "pk": 48
+},
+{
+   "model": "auth.user",
+   "fields": {
+      "password": "pbkdf2_sha256$20000$cKKxNiBQoy8g$YhlNZp0YtxJLlDSqUIYnUBWA8HIH58CkGUz1VUbDIe4=",
+      "last_login": "2018-01-04T09:47:17.208Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "",
+      "last_name": "",
+      "email": "marukhelin@gmail.com",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2018-01-04T06:08:09.899Z",
+      "groups": [],
+      "user_permissions": []
+   },
+   "pk": 1
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-04T06:09:25.307Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "\u0413\u043e\u0441\u0442\u0438\u043d\u044b\u0435",
+      "action_flag": 1,
+      "change_message": "[{\"added\": {}}]"
+   },
+   "pk": 1
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-04T09:32:39.503Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "head",
+      "object_repr": "head",
+      "action_flag": 1,
+      "change_message": ""
+   },
+   "pk": 8
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-04T13:49:58.516Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "1",
+      "object_repr": "\u0413\u0435\u043e\u0440\u0433\u0438\u0439 \u041c\u043e\u0448\u043a\u043e\u0432",
+      "action_flag": 1,
+      "change_message": ""
+   },
+   "pk": 9
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-04T13:50:18.211Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "2",
+      "object_repr": "\u0413\u0435\u043e\u0440\u0433\u0438\u0439 \u041c\u043e\u0448\u043a\u043e\u0432",
+      "action_flag": 1,
+      "change_message": ""
+   },
+   "pk": 10
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-04T14:06:17.913Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "1",
+      "object_repr": "\u0413\u043e\u0441\u0442\u0438\u043d\u044b\u0435",
+      "action_flag": 2,
+      "change_message": "Added \u041f\u0440\u043e\u0435\u043a\u0442 \u0432 \u043f\u043e\u0440\u0442\u0444\u043e\u043b\u0438\u043e \"1\". Added \u041f\u0440\u043e\u0435\u043a\u0442 \u0432 \u043f\u043e\u0440\u0442\u0444\u043e\u043b\u0438\u043e \"2\". Added \u041f\u0440\u043e\u0435\u043a\u0442 \u0432 \u043f\u043e\u0440\u0442\u0444\u043e\u043b\u0438\u043e \"3\". Added \u041f\u0440\u043e\u0435\u043a\u0442 \u0432 \u043f\u043e\u0440\u0442\u0444\u043e\u043b\u0438\u043e \"4\"."
+   },
+   "pk": 15
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-04T14:06:35.447Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "2",
+      "object_repr": "\u041f\u0440\u0438\u0445\u043e\u0436\u0438\u0435",
+      "action_flag": 1,
+      "change_message": ""
+   },
+   "pk": 16
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-04T14:32:40.321Z",
+      "user": 1,
+      "content_type": 8,
+      "object_id": "3",
+      "object_repr": "\u041a\u0443\u0445\u043d\u0438",
+      "action_flag": 1,
+      "change_message": ""
+   },
+   "pk": 17
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-04T14:35:11.812Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "head",
+      "object_repr": "head",
+      "action_flag": 2,
+      "change_message": "No fields changed."
+   },
+   "pk": 18
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-04T14:35:22.966Z",
+      "user": 1,
+      "content_type": 11,
+      "object_id": "head",
+      "object_repr": "head",
+      "action_flag": 2,
+      "change_message": "Changed text."
+   },
+   "pk": 19
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-04T14:58:20.425Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "\u0410\u043d\u043d\u0430 \u0421\u043a\u0432\u043e\u0440\u0446\u043e\u0432\u0430",
+      "action_flag": 1,
+      "change_message": ""
+   },
+   "pk": 20
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-04T14:58:26.223Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "1",
+      "object_repr": "\u0410\u043d\u043d\u0430 \u0421\u043a\u0432\u043e\u0440\u0446\u043e\u0432\u0430",
+      "action_flag": 2,
+      "change_message": "No fields changed."
+   },
+   "pk": 21
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-04T14:58:38.310Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "2",
+      "object_repr": "\u0410\u043d\u043d\u0430 \u0421\u043a\u0432\u043e\u0440\u0446\u043e\u0432\u0430",
+      "action_flag": 1,
+      "change_message": ""
+   },
+   "pk": 22
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-04T15:01:57.695Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "3",
+      "object_repr": "\u0410\u043d\u043d\u0430 \u0421\u043a\u0432\u043e\u0440\u0446\u043e\u0432\u0430",
+      "action_flag": 1,
+      "change_message": ""
+   },
+   "pk": 23
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-04T15:02:08.146Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "4",
+      "object_repr": "\u0410\u043d\u043d\u0430 \u0421\u043a\u0432\u043e\u0440\u0446\u043e\u0432\u0430",
+      "action_flag": 1,
+      "change_message": ""
+   },
+   "pk": 24
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-04T15:02:26.954Z",
+      "user": 1,
+      "content_type": 9,
+      "object_id": "5",
+      "object_repr": "\u0410\u043d\u043d\u0430 \u0421\u043a\u0432\u043e\u0440\u0446\u043e\u0432\u0430",
+      "action_flag": 1,
+      "change_message": ""
+   },
+   "pk": 25
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-04T15:06:43.652Z",
+      "user": 1,
+      "content_type": 13,
+      "object_id": "3",
+      "object_repr": "\u041b\u0435\u0445\u0430 \u041b\u0435\u0445\u043e\u0432\u0438\u0447",
+      "action_flag": 1,
+      "change_message": ""
+   },
+   "pk": 26
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T03:17:46.983Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "1",
+      "object_repr": "fdf - 2123",
+      "action_flag": 1,
+      "change_message": ""
+   },
+   "pk": 27
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T03:17:57.548Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "1",
+      "object_repr": "fdf - 2123",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 28
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T03:18:43.800Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "2",
+      "object_repr": "fdfdfdfa - 14",
+      "action_flag": 1,
+      "change_message": ""
+   },
+   "pk": 29
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T03:19:14.585Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "2",
+      "object_repr": "fdfdfdfa - 14",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 30
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T04:04:40.201Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "3",
+      "object_repr": "sanya - None",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 31
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:01.037Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "25",
+      "object_repr": "\u044b\u0444\u044b - \u044b\u0444\u044b\u0444",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 32
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:01.154Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "24",
+      "object_repr": "\u044b\u0444\u044b - \u044b\u0444\u044b\u0444",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 33
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:01.275Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "23",
+      "object_repr": "\u044b\u0444\u044b - \u044b\u0444\u044b\u0444",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 34
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:01.475Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "22",
+      "object_repr": "\u044b\u0444\u044b - \u044b\u0444\u044b\u0444",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 35
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:01.700Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "21",
+      "object_repr": "\u044b\u0444\u044b - \u044b\u0444\u044b\u0444",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 36
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:01.917Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "20",
+      "object_repr": "\u044b\u0444\u044b - \u044b\u0444\u044b\u0444",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 37
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:02.050Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "19",
+      "object_repr": "\u044b\u0444\u044b - \u044b\u0444\u044b\u0444",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 38
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:02.158Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "18",
+      "object_repr": "\u044b\u0444\u044b - \u044b\u0444\u044b\u0444",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 39
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:02.299Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "17",
+      "object_repr": "\u0432\u0430\u0432\u0430\u0432 - 113",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 40
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:02.425Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "16",
+      "object_repr": "None - None",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 41
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:02.549Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "15",
+      "object_repr": "None - None",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 42
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:02.673Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "14",
+      "object_repr": "None - None",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 43
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:02.792Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "13",
+      "object_repr": "\u0430\u0432\u0430\u0432\u0444\u0430 - 2\u04432\u04432",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 44
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:02.916Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "12",
+      "object_repr": "\u0443\u043f4\u0443\u043a - \u0430\u043f\u044b\u0430\u043f",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 45
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:03.033Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "11",
+      "object_repr": "\u0432\u044b\u0432\u044b\u0432 - 131313",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 46
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:03.252Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "10",
+      "object_repr": "1\u0432\u0430\u0430\u0432\u0430\u0430\u0430 - 22",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 47
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:03.416Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "9",
+      "object_repr": "\u0432\u0430\u0430\u0432\u0430\u0430\u0430 - 22",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 48
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:03.572Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "8",
+      "object_repr": "\u0432\u0430\u0430\u0432\u0430 - 22",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 49
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:03.687Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "7",
+      "object_repr": "\u0430\u0432\u0430\u0432 - 2323",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 50
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:03.831Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "6",
+      "object_repr": "\u0430\u0432\u0430\u0432\u0430\u0432 - 242",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 51
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:03.943Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "5",
+      "object_repr": "\u0430\u0432\u0430\u0432\u0430\u0432 - 242",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 52
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T05:50:04.070Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "4",
+      "object_repr": "sanya - 2919314",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 53
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T13:59:24.474Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "27",
+      "object_repr": "\u0430\u043a\u0430\u0440 - 124121",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 54
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-05T13:59:24.614Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "26",
+      "object_repr": "\u043b\u0435\u0445\u0430 - 220141",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 55
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-06T07:06:09.572Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "36",
+      "object_repr": "\u0444\u044b\u0432\u0430\u0444\u0432 - 121212",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 56
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-06T07:06:09.709Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "35",
+      "object_repr": "\u0444\u044b\u0432\u0430\u0444\u0432 - 121212",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 57
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-06T07:06:09.942Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "34",
+      "object_repr": "\u0432\u043e\u0430\u043b\u0444\u0432\u043f - 5424523",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 58
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-06T07:06:10.042Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "33",
+      "object_repr": "\u0432\u0444\u0430\u0444\u0430 - 254",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 59
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-06T07:06:10.151Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "32",
+      "object_repr": "\u0444\u0432\u0430\u0444\u0430\u0444 - 323",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 60
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-06T07:06:10.309Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "31",
+      "object_repr": "\u0432\u0430\u0444\u0430\u0444\u0430\u0444\u0432\u0430 - 24135",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 61
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-06T07:06:10.415Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "30",
+      "object_repr": "\u0436\u043e\u043f\u0430 - 228",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 62
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-06T07:06:10.514Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "29",
+      "object_repr": "\u0430\u0432\u0444\u0430\u0432\u0444\u0432\u0430 - 131",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 63
+},
+{
+   "model": "admin.logentry",
+   "fields": {
+      "action_time": "2018-01-06T07:06:10.826Z",
+      "user": 1,
+      "content_type": 16,
+      "object_id": "28",
+      "object_repr": "\u041f\u0444\u043f\u0430 - 3535",
+      "action_flag": 3,
+      "change_message": ""
+   },
+   "pk": 64
+}
+]
