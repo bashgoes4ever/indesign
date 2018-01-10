@@ -171,7 +171,7 @@ $(document).ready(function() {
 	 		singleItem : true,
 	 		mouseDrag: true,
 	 		nav: true,
-	 		navigationText : ["<div class='exp-button-prev'><img src='static/img/big-arr-l.png'/></div>", "<div class='exp-button-next'><img src='static/img/big-arr-r.png'/></div>"],
+	 		navigationText : ["<div class='exp-button-prev'><img src='img/big-arr-l.png'/></div>", "<div class='exp-button-next'><img src='img/big-arr-r.png'/></div>"],
 	 	});
 	 }
 
@@ -179,7 +179,7 @@ $(document).ready(function() {
 	 	singleItem: true,
 	 	mouseDrag: true,
 	 	nav: true,
-	 	navigationText : ["<div class='room-button-prev'><img src='static/img/big-arr-l.png'/></div>", "<div class='room-button-next'><img src='static/img/big-arr-r.png'/></div>"],
+	 	navigationText : ["<div class='room-button-prev'><img src='img/big-arr-l.png'/></div>", "<div class='room-button-next'><img src='img/big-arr-r.png'/></div>"],
 	 });
 	// var china_slider = new Swiper('.china-slider', {
 	// 	speed: 400,
@@ -427,6 +427,12 @@ $(document).ready(function() {
 
 
 
+})
+
+	$(window).load(function() {
+		
+	
+
 	if ($(window).width() > 1190) {
 
 		$('main h2').css({
@@ -670,5 +676,4 @@ $(document).ready(function() {
 
 	}
 
-})
-
+	})

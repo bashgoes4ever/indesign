@@ -1,0 +1,922 @@
+{% load static %}
+{% load addendum_tags %}
+<!DOCTYPE html>
+<html lang="en"></html>
+<head>
+	<meta charset="UTF-8"/>
+	<title>Document</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	<link rel="stylesheet" href="{% static 'libs/bootstrap/bootstrap-grid-3.3.1.min.css' %}"/>
+	<link href="{% static 'libs/owl-carousel/owl.carousel.css' %}" rel="stylesheet"/>
+	<link href="{% static 'libs/Swiper-4.0.6/dist/css/swiper.css' %}" rel="stylesheet"/>
+	<link href="{% static 'css/fonts.css' %}" rel="stylesheet"/>
+	<link href="{% static 'css/normalize.css' %}" rel="stylesheet"/>
+	<link href="{% static 'css/main.css' %}" rel="stylesheet"/>
+	<link href="{% static 'css/media.css' %}" rel="stylesheet"/>
+</head>
+<body>
+    <style type="text/css">#hellopreloader>p{display:none;}#hellopreloader_preload{display: block;position: fixed;z-index: 99999;top: 0;left: 0;width: 100%;height: 100%;min-width: 1px;background: #b23e3e url(http://hello-site.ru//main/images/preloads/tail-spin.svg) center center no-repeat;background-size:77px;}</style>
+	<div id="hellopreloader"><div id="hellopreloader_preload"></div></div>
+	<script type="text/javascript">var hellopreloader = document.getElementById("hellopreloader_preload");function fadeOutnojquery(el){el.style.opacity = 1;var interhellopreloader = setInterval(function(){el.style.opacity = el.style.opacity - 0.05;if (el.style.opacity <=0.05){ clearInterval(interhellopreloader);hellopreloader.style.display = "none";}},16);}window.onload = function(){setTimeout(function(){fadeOutnojquery(hellopreloader);},1);};</script>
+	<header>
+		<div class="container"><img src="{% static 'img/burger.png' %}" class="burger"/>
+            <img src="{% static 'img/logo.png' %}" class="logo"/>
+			<h1>{% snippet "112" safe=true %}
+                Дизайн интерьера и ремонтные работы во Владивостоке
+            {% endsnippet %}</h1>
+			<div class="phone clearfix"><img src="{% static 'img/phone.png' %}"/><span>{% snippet "158" safe=true %}+7 (495) 367 - 52 - 49{% endsnippet %}</span></div>
+            <img src="{% static 'img/m-phone.png' %}" class="m-phone"/>
+		</div>
+	</header>
+	<nav>
+		<div class="container">
+			<ul class="navigation"><img src="{% static 'img/close.png' %}" class="menu-close"/>
+				<li class="navigation-active a1">О компании</li>
+				<li class="a2">Услуги</li>
+				<li class="a3">Проекты</li>
+				<li class="a4">Ремонт и отделка</li>
+				<li class="a5">Цены</li>
+				<li class="a6">Мебельный тур</li>
+				<li class="a7">Контакты</li>
+			</ul>
+		</div>
+	</nav>
+	<main>
+		<div class="main-img-wrap"><img src="{% static 'img/main/bg.png' %}"/></div>
+		<div class="container">
+			<h2 class="anim">{% snippet "213" safe=true %}Создаём красивые и функциональные интерьеры<br>
+                для квартир и домов, в которых комфортно жить{% endsnippet %}</h2>
+			<div class="line anim"></div>
+			<h3 class="anim">{% snippet "248" safe=true %}Разработка и ведение проектов от эскиза до воплощения,
+                наша команда это объединение экспертов в области дизайна интерьера и комплексного ремонта{% endsnippet %}</h3>
+			<button class="anim button big-button calculate-button a8"><span class='button-text'>Рассчитать стоимость</span><span class="button-border"></span><span class="button-hover"></span></button>
+			<div class="main-flex">
+				<div class="main-item anim">
+					<h5>{% snippet "299" safe=true %}3d визуализация{% endsnippet %}</h5><img src="{% static 'img/main/1.png' %}"/>
+				</div>
+				<div class="main-item anim">
+					<h5>{% snippet "311" safe=true %}Воплощение<br>дизайнерских решений{% endsnippet %}</h5><img src="{% static 'img/main/2.png' %}"/>
+				</div>
+				<div class="main-item anim">
+					<h5>{% snippet "323" safe=true %}Ремонтно-отделочные<br>работы{% endsnippet %}</h5><img src="{% static 'img/main/3.png' %}"/>
+				</div>
+				<div class="main-item anim">
+					<h5>{% snippet "334" safe=true %}Авторский надзор{% endsnippet %}</h5><img src="{% static 'img/main/4.png' %}"/>
+				</div>
+			</div>
+		</div>
+	</main>
+	<section class="portfolio">
+		<div class="container">
+			<h3>{% snippet "346" safe=true %}Портфолио наших работ{% endsnippet %}</h3>
+			<h4>{% snippet "353" safe=true %}Мы работаем в различных стилях: арт-деко, классика, скандинавский,
+                современная классика,<br> минимализм, лофт и другие{% endsnippet %}</h4>
+			<div class="portfolio-block clearfix">
+				<div class="portfolio-menu">
+					<ul>
+                        {% for category in categories %}
+                            <li data-slider="p{{ forloop.counter0 }}"
+                                class="anim{% if forloop.counter0 == 0 %} portfolio-active{% endif %}">
+                                <span>{{ category.name }}</span>
+                            </li>
+                        {% endfor %}
+					</ul>
+				</div>
+				<div class="portfolio-sliders">
+					<div class="portfolio-border anim"></div>
+                    <svg class="portfolio-svg">
+						<rect x="1" y="1"></rect>
+					</svg>
+                    {% for category in categories %}
+                        <div id="p{{ forloop.counter0 }}"
+                             class="portfolio-slider{% if forloop.counter0 == 0 %} current-slider{% endif %}">
+                            <div class="swiper-container gallery-top{{ forloop.counter0 }} main-slider">
+                                <div class="swiper-wrapper">
+                                    {% for image in category.projectimage_set.all %}
+                                        <div class="swiper-slide"><img src="{{ image.image.url }}"/></div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                            <div class="slider-nav">
+                                <div class="project-button-prev{{ forloop.counter0 }} slide-prev">
+                                    <img src="{% static 'img/arrow-left.png' %}"/>
+                                </div>
+                                <div class="swiper-pagination{{ forloop.counter0 }} slide-pag"></div>
+                                <div class="project-button-next{{ forloop.counter0 }} slide-next">
+                                    <img src="{% static 'img/arrow-right.png' %}"/>
+                                </div>
+                            </div>
+                            <div class="swiper-container gallery-thumbs{{ forloop.counter0 }} thumbs-slider">
+                                <div class="swiper-wrapper">
+                                    {% for image in category.projectimage_set.all %}
+                                        <div class="swiper-slide"><img src="{{ image.image.url }}"/></div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+					    </div>
+                    {% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="complex">
+		<div class="container">
+			<h3>{% snippet "1527" safe=true %}Чтобы вы получали лучшее качество работ, мы работаем в комплексе{% endsnippet %}</h3>
+			<div class="complex-flex">
+				<div class="complex-border anim"></div>
+                <svg class="complex-svg">
+					<rect x="1" y="1"></rect>
+				</svg>
+				<div class="complex-item anim">
+					<div class="complex-head clearfix">
+                        <img src="{% static 'img/complex/1.png' %}"/>
+						<h5>{% snippet "1595" safe=true %}3D визуализация{% endsnippet %}<span class="line"></span></h5>
+					</div>
+					<p>{% snippet "1602" safe=true %}Визуализация интерьеров – это создание изображений
+                        внутреннего объема помещений средствами компьютерной графики.
+                        Она позволяет увидеть будущий объект, интерьер в целом и оценитьего максимально объективно.{% endsnippet %}</p>
+				</div>
+				<div class="complex-item anim">
+					<div class="complex-head clearfix"><img src="{% static 'img/complex/2.png' %}"/>
+						<h5>{% snippet "1684" safe=true %}Комплекс чертежей{% endsnippet %}<span class="line"></span></h5>
+					</div>
+					<p>{% snippet "1691" safe=true %}Cитуационный план с экспликацией помещений<br>План демонтируемых перегородок<br>
+                        План возводимых перегородок<br>План расстановки мебели и оборудования<br>План пола
+                        (покрытия, уровни пола). Тёплый пол.<br>Ведомости отделочных материалов сантехнического оборудования,
+                        осветительных  приборов{% endsnippet %}</p>
+				</div>
+				<div class="complex-item anim">
+					<div class="complex-head clearfix"><img src="{% static 'img/complex/3.png' %}"/>
+						<h5>{% snippet "1799" safe=true %}Комплектация объекта{% endsnippet %}<span class="line"></span></h5>
+					</div>
+					<p>{% snippet "1806" safe=true %}Подбор отделочных материалов, мебелии декоративных предметов интерьера,
+                        бытовой техники, сантехнического оборудования, осветительных приборов. Составление технических
+                        заданий для изготовления мебели, элементов декора и т.п.<br>Мониторинг, заказ, покупка
+                        и организация доставки необходимого{% endsnippet %}</p>
+				</div>
+				<div class="complex-item anim">
+					<div class="complex-head clearfix"><img src="{% static 'img/complex/4.png' %}"/>
+						<h5>{% snippet "1916" safe=true %}Ремонтные работы{% endsnippet %}<span class="line"></span></h5>
+					</div>
+					<p>{% snippet "1923" safe=true %}Грамотное, пошаговое выполнение работ, обеспечивающее качественное исполнение.
+                        Все ремонтно-отделочные работы тесно взаимосвязаны и имеют строгую последовательность.{% endsnippet %}</p>
+				</div>
+				<div class="complex-item anim">
+					<div class="complex-head clearfix"><img src="{% static 'img/complex/5.png' %}"/>
+						<h5>{% snippet "1974" safe=true %}Декорирование{% endsnippet %}<span class="line"></span></h5>
+					</div>
+					<p>{% snippet "1980" safe=true %}Выбор декоративных элементов и аксессуаров<br>Подбор настольных ламп,
+                        торшеров и т.п.<br>Подбор текстиля, штор, гардин ролетов и жалюзи<br>Подбор постельного белья,
+                        покрывал, декоративных подушек и скатертей<br>Подбор картин, , ваз и других аксессуаров<br>Подбор
+                        посуды, керамики и т.п.{% endsnippet %}</p>
+				</div>
+				<div class="complex-item anim">
+					<div class="complex-head clearfix"><img src="{% static 'img/complex/6.png' %}"/>
+						<h5>{% snippet "2094" safe=true %}Авторский надзор{% endsnippet %}<span class="line"></span></h5>
+					</div>
+					<p>{% snippet "2101" safe=true %}Выезд на объект с целью контроля работ.<br>Внесение коррективов в
+                        комплект чертежей в процессе ремонта (после демонтажа/монтажа перегородок, выравнивания
+                        полов, стен, потолков.<br>Контроль за выставлением счетов и осуществления поставок
+                        (отделочных материалов, мебели, оборудования и т.д.){% endsnippet %}</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="dark-bg design">
+		<div class="design-bg"><img src="{% static 'img/design/bg.png' %}"/></div>
+		<div class="container">
+			<h3>{% snippet "2215" safe=true %}Это всё прекрасно, но слишком дорого - это не так!{% endsnippet %}</h3>
+			<div class="line"></div>
+			<h4>{% snippet "2230" safe=true %}Дизайн проект - это инструмент который позволит сэкономить на ремонте до
+                <span class='big-h'>300</span> тысяч рублей<br> и <span class='big-h'>2</span>
+                <span class='min-h'>месяца</span>  времени на контроле работ, закупке отделочных материалов
+                и предметов интерьера{% endsnippet %}</h4>
+			<div class="design-block">
+				<div class="design-stats clearfix"><img src="{% static 'img/design/arrow.png' %}" class="arrow anim"/>
+					<div class="design-stat clearfix">
+						<div class="design-line-block">
+							<h6>Дизайн проект</h6>
+							<div class="design-line">
+								<div class="line-1 line-inner line-anim"></div>
+							</div>
+						</div>
+						<div class="design-perc first-perc"><span><span class="spincrement">4</span>%</span></div>
+					</div>
+					<div class="design-stat clearfix">
+						<div class="design-line-block">
+							<h6>Предметы декора</h6>
+							<div class="design-line">
+								<div class="line-2 line-inner line-anim"></div>
+							</div>
+						</div>
+						<div class="design-perc"><span><span class="spincrement">10</span>%</span></div>
+					</div>
+					<div class="design-stat clearfix">
+						<div class="design-line-block">
+							<h6>Черновые материалы</h6>
+							<div class="design-line">
+								<div class="line-3 line-inner line-anim"></div>
+							</div>
+						</div>
+						<div class="design-perc"><span><span class="spincrement">14</span>%</span></div>
+					</div>
+					<div class="design-stat clearfix">
+						<div class="design-line-block">
+							<h6>Ремонтные работы</h6>
+							<div class="design-line">
+								<div class="line-4 line-inner line-anim"></div>
+							</div>
+						</div>
+						<div class="design-perc"><span><span class="spincrement">20</span>%</span></div>
+					</div>
+					<div class="design-stat clearfix">
+						<div class="design-line-block">
+							<h6>Отделочные материалы</h6>
+							<div class="design-line">
+								<div class="line-5 line-inner line-anim"></div>
+							</div>
+						</div>
+						<div class="design-perc"><span><span class="spincrement">24</span>%</span></div>
+					</div>
+					<div class="design-stat clearfix">
+						<div class="design-line-block">
+							<h6>Мебель</h6>
+							<div class="design-line">
+								<div class="line-6 line-inner line-anim"></div>
+							</div>
+						</div>
+						<div class="design-perc"><span><span class="spincrement">28</span>%</span></div>
+					</div>
+				</div>
+				<div class="design-side anim">
+					<p><span class='side-h'>Стоимость дизайн-проекта </span><br>в среднем составляет
+                        <br>около <span class='side-p'>4%</span> от общего<br>бюджета на ремонт <br>и укомплектовку объекта</p>
+				</div>
+			</div>
+			<div class="design-st-container container"><img src="{% static 'img/design/1.png' %}" class="st"/><img src="{% static 'img/design/1_mob.png' %}" class="st-mob"/></div>
+		</div>
+	</section>
+	<section class="explain">
+		<div class="container">
+			<h3>{% snippet "2433" safe=true %}Оцените, от каких трудностей вас может избавить дизайн-проект{% endsnippet %}</h3>
+			<div class="explain-flex">
+				<div class="explain-border"></div>
+				<div class="explain-slider">
+					<div class="explain-item anim"><img src="{% static 'img/explain/1.png' %}" class="explain-img"/>
+						<h5>{% snippet "2455" safe=true %}Ремонт по дизайн проекту{% endsnippet %}</h5>
+						<div class="explain-line"></div>
+						<div class="explain-point">
+							<h6>{% snippet "2465" safe=true %}Точный срок окончания работ{% endsnippet %}</h6>
+							<p>{% snippet "2473" safe=true %}Сдача объекта в фиксированые сроки.
+                                В случае невыполения работ в несём юридическую и материальную ответственность{% endsnippet %}</p>
+						</div>
+						<div class="explain-point">
+							<h6>{% snippet "2524" safe=true %}Вы понимаете к чему идёте{% endsnippet %}</h6>
+							<p>{% snippet "2533" safe=true %}Вы видите точную картину вашего будущего жилья и понимаете
+                                какой интерьер у вас будет по окончанию работ{% endsnippet %}</p>
+						</div>
+						<div class="explain-point">
+							<h6>{% snippet "2586" safe=true %}Знаете точный расход материалов{% endsnippet %}</h6>
+							<p>{% snippet "2594" safe=true %}Мы предоставляем полный список проверенных материалов с оптимальным соотношением цены и качества.{% endsnippet %}</p>
+						</div>
+						<div class="explain-point">
+							<h6>{% snippet "2611" safe=true %}Знаете точную стоимость{% endsnippet %}</h6>
+							<p>{% snippet "2618" safe=true %}Правило хорошего проектировщика — заказчик  должен сэкономить больше,
+                                чем потратил на проект. И нам удалось решить данную задачу. Заказчик не только знает точную
+                                стоимость но еще и экономит{% endsnippet %}</p>
+						</div>
+					</div>
+					<div class="explain-item anim"><img src="{% static 'img/explain/2.png' %}" class="explain-img"/>
+						<h5>{% snippet "2720" safe=true %}Обычный ремонт{% endsnippet %}</h5>
+						<div class="explain-line"></div>
+						<div class="explain-point">
+							<h6>{% snippet "2728" safe=true %}Сроки не определить{% endsnippet %}</h6>
+							<p>{% snippet "2735" safe=true %}Часто ремонт растягивается на более долгий срок чем планировалось изначально,
+                                в силу трудностей с ремонтными бригадами, и материалами{% endsnippet %}</p>
+						</div>
+						<div class="explain-point">
+							<h6>{% snippet "2789" safe=true %}Точный результат не предвидеть{% endsnippet %}</h6>
+							<p>{% snippet "2797" safe=true %}Как правило могут возникнуть трудности с поиском материалов и их сочетанием,
+                                в итоге может получится не то что вы хотели{% endsnippet %}</p>
+						</div>
+						<div class="explain-point">
+							<h6>{% snippet "2853" safe=true %}Можно не рассчитать материалы{% endsnippet %}</h6>
+							<p>{% snippet "2861" safe=true %}Часто происходит так что можно приобрести больше материалов чем требуется и
+                                переплатить лишние деньги{% endsnippet %}</p>
+						</div>
+						<div class="explain-point">
+							<h6>{% snippet "2911" safe=true %}Стоимость может варьироваться{% endsnippet %}</h6>
+							<p>{% snippet "2918" safe=true %}Можно не точно рассчитать материалы и могут возникнуть сложности по ходу ремонта
+                                в отличии от ремонта по дизайн проекту где стоимость фиксируется{% endsnippet %}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="dark-bg year">
+		<h3>{% snippet "2977" safe=true %}За 5 лет мы создали уникальные интерьеры для более 500 счастливых семей{% endsnippet %}</h3>
+		<div class="line"></div>
+		<h4>{% snippet "2994" safe=true %}Каждый проект - это отдельная дизайн история, к каждому из которых мы
+            подходим индивидуально{% endsnippet %}</h4>
+		<div class="container">
+			<div class="year-block">
+				<div class="year-top-left">
+					<div class="year-top-left-line"></div>
+					<div class="year-top-left-wrap clearfix">
+						<div class="year-item">
+							<h5><img src="{% static 'img/year/1.png' %}"/><span>{% snippet "3034" safe=true %}Создаём концепцию{% endsnippet %}</span></h5>
+							<p>{% snippet "3040" safe=true %}По разработанным нами методикам выявляем стиль интерьера и
+                                дизайнера, который лучше всего справится с вашей задачей. Знакомимся с вами и квартирой,
+                                фиксируем размеры и важные особенности квартиры на чертеже. Разрабатываем несколько вариантов
+                                планировок с учетом ваших пожеланий и возможностей пространства.{% endsnippet %}</p>
+						</div>
+						<div class="year-item">
+							<h5><img src="{% static 'img/year/2.png' %}"/><span>{% snippet "3182" safe=true %}Визуализируем{% endsnippet %}</span></h5>
+							<p>{% snippet "3187" safe=true %}Визуализация интерьеров – это создание изображений <br>
+                                внутреннего объема помещений средствами <br>компьютерной графики. Она позволяет увидеть <br>
+                                будущий объект, интерьер в целом и оценить его <br>максимально объективно.{% endsnippet %}</p>
+						</div>
+					</div>
+				</div>
+				<div class="year-top-right"><img src="{% static 'img/year/bg1.png' %}"/></div>
+			</div>
+			<div class="year-block">
+				<div class="year-bottom-left"><img src="{% static 'img/year/bg2.png' %}"/></div>
+				<div class="year-bottom-right">
+					<div class="year-bottom-right-line"></div>
+					<div class="year-bottom-right-wrap">
+						<div class="year-item">
+							<h5><img src="{% static 'img/year/3.png' %}"/><span>{% snippet "3299" safe=true %}Комплектуем объект{% endsnippet %}</span></h5>
+							<p>{% snippet "3305" safe=true %}Подбор отделочных материалов, мебелии декоративных
+                                предметов интерьера, бытовойтехники, сантехнического оборудования, осветительных приборов<br>
+                                Составление технических заданий для изготовления мебели, элементов декора и т.п.
+                                Мониторинг, заказ, покупка и организация доставки необходимого. Координация и контроль
+                                за процессом комплектации объекта: от предзаказа до монтажа{% endsnippet %}</p>
+						</div>
+						<div class="year-item">
+							<h5><img src="{% static 'img/year/4.png' %}"/><span>{% snippet "3478" safe=true %}Реализация{% endsnippet %}</span></h5>
+							<p>{% snippet "3483" safe=true %}Готовим проект к реализациии. Переносим дизайн в чертежи, утверждаем и
+                                вносим правки, ведём авторский и технический надзор, комплектуем и декорируем помещение{% endsnippet %}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="project pr1-section">
+		<div class="container">
+			<h3>{% snippet "3542" safe=true %}Разработаем дизайн-проект, который будет точным <br>отражением ваших желаний.{% endsnippet %}</h3>
+			<h4>{% snippet "3554" safe=true %}Заказав ремонт по дизайн-проекту вы получаете скидку 50% на дизайн-проект{% endsnippet %}</h4>
+			<div class="project-flex clearfix">
+				<div class="project-border"></div>
+				<div class="project-item anim"><img src="{% static 'img/project/1.png' %}" class="project-img"/>
+					<h5>{% snippet "3578" safe=true %}Эскизный{% endsnippet %}</h5>
+					<p class="price">{% snippet "3584" safe=true %}600 руб/кв.м{% endsnippet %}</p>
+					<div class="project-line"></div>
+					<p class="description">{% snippet "3592" safe=true %}· Консультация дизайнера<br>· Составление технического задания<br>· Выезд на замер<br>· Подготовка обмерного плана<br>· Разработка планировочных решений (2-3 варианта)<br>· Подготовка пакета чертежей для строительства:{% endsnippet %}<br><span class='tab'>{% snippet "3619" safe=true %}· план демонтируемых перегородок{% endsnippet %}</span><br><span class='tab'>{% snippet "3628" safe=true %}· план возводимых перегородок{% endsnippet %}</span><br>{% snippet "3636" safe=true %}· План расстановки мебели{% endsnippet %}</p>
+					<button class="button project-detail"><span class="button-text">Подробнее</span></button>
+					<button class="button buy-project" data-type="Заказ эскизного дизайн проекта"><span class='button-text'>Заказать</span><span class="button-hover"></span></button>
+				</div>
+				<div class="project-item anim"><img src="{% static 'img/project/2.png' %}" class="project-img"/>
+					<h5>{% snippet "3662" safe=true %}Базовый{% endsnippet %}</h5>
+					<p class="price">{% snippet "3668" safe=true %}1100 руб/кв.м{% endsnippet %}</p>
+					<div class="project-line"></div>
+					<p class="description">{% snippet "3676" safe=true %}· Консультация дизайнера<br>· Составление технического задания<br>· Выезд на замер<br>· Подготовка обмерного плана<br>· Разработка планировочных решений (2-3 варианта)<br>· Подготовка пакета чертежей для строительства:{% endsnippet %}<br><span class='tab'>{% snippet "3703" safe=true %}· план демонтируемых перегородок{% endsnippet %}</span><br><span class='tab'>{% snippet "3712" safe=true %}· план возводимых перегородок{% endsnippet %}</span><br><span class='tab'>{% snippet "3721" safe=true %}· план расстановки мебели{% endsnippet %}</span><br><span class='tab'>{% snippet "3730" safe=true %}· план сантехники с привязками{% endsnippet %}</span><br><span class='tab'>{% snippet "3740" safe=true %}· план розеток с привязками{% endsnippet %}</span><br><span class='tab'>{% snippet "3750" safe=true %}· план светильников с привязками{% endsnippet %}</span><br><span class='tab'>{% snippet "3760" safe=true %}· план выключателей с привязками{% endsnippet %}</span><br><span class='tab'>{% snippet "3770" safe=true %}· план потолков{% endsnippet %}</span><br><span class='tab'>{% snippet "3778" safe=true %}· план полов{% endsnippet %}</span><br>{% snippet "3785" safe=true %}· Развёртки по стенам{% endsnippet %}</p>
+					<button class="button project-detail"><span class="button-text">Подробнее</span></button>
+					<button class="button buy-project" data-type="Заказ базового дизайн проекта"><span class='button-text'>Заказать</span><span class="button-hover"></span></button>
+				</div>
+				<div class="project-item anim"><img src="{% static 'img/project/3.png' %}" class="project-img"/>
+					<h5>{% snippet "3811" safe=true %}Оптимальный{% endsnippet %}</h5>
+					<p class="price">{% snippet "3817" safe=true %}2100 руб/кв.м{% endsnippet %}</p>
+					<div class="project-line"></div>
+					<p class="description">{% snippet "3825" safe=true %}· Консультация дизайнера<br>· Составление технического задания<br>· Выезд на замер<br>· Подготовка обмерного плана<br>· Разработка планировочных решений (2-3 варианта)<br>· Определение стилистического решения<br>· Разработка концепции дизайна каждого помещения<br>· Подбор отделочных материалов<br>· Подбор мебели (концептуальный)<br>· Подбор светильников (концептуальный)<br>· Создание 3d-визуализации с использованием специализированных программ<br>· Подготовка пакета чертежей для строительства<br>· Ведомость отделки на каждое помещение<br>· Сдача проекта в электронном виде в формате PDF{% endsnippet %}</p>
+					<button class="button project-detail"><span class="button-text">Подробнее</span></button>
+					<button class="button buy-project" data-type="Заказ оптимального дизайн проекта"><span class='button-text'>Заказать</span><span class="button-hover"></span></button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="video dark-bg">
+		<div class="video-img-wrap"><img src="{% static 'img/video/bg.png' %}"/></div>
+		<div class="container">
+			<h3>{% snippet "3906" safe=true %}Мы имеем прямые контракты с оптовыми базами. <br>Выбрав нас, вы получаете скидку до 30% на материалы!{% endsnippet %}</h3>
+			<div class="video-block clearfix">
+				<div class="video-right">
+					<div class="video-item anim"><img src="{% static 'img/video/i1.png' %}"/>
+						<p>{% snippet "3935" safe=true %}Берём на себя всю ответственность за проект и даём гарантию 2 года на  все материалы{% endsnippet %}</p>
+					</div>
+					<div class="video-item anim"><img src="{% static 'img/video/i2.png' %}"/>
+						<p>{% snippet "3961" safe=true %}Подбираем качественные материалы проверенные временем{% endsnippet %}</p>
+					</div>
+					<div class="video-item anim"><img src="{% static 'img/video/i3.png' %}"/>
+						<p>{% snippet "3976" safe=true %}Закупаем мебель и предметы декора с экономией до 30%{% endsnippet %}</p>
+					</div>
+					<div class="video-item anim"><img src="{% static 'img/video/i4.png' %}"/>
+						<p>{% snippet "3995" safe=true %}Мебельный тур в Китай{% endsnippet %}</p>
+					</div>
+				</div>
+				<div class="video-left">
+					<div class="video-border1"></div>
+					<div class="video-border2"></div>
+					<div class="video-play"><img src="{% static 'img/video/play.png' %}"/></div><img src="{% static 'img/video/video.png' %}" class="video-img"/>
+				</div>
+			</div>
+			<div class="partners-flex">
+				<div class="partner anim"><img src="{% static 'img/video/1.png' %}"/></div>
+				<div class="partner anim"><img src="{% static 'img/video/2.png' %}"/></div>
+				<div class="partner anim"><img src="{% static 'img/video/3.png' %}"/></div>
+				<div class="partner anim"><img src="{% static 'img/video/4.png' %}"/></div>
+				<div class="partner anim"><img src="{% static 'img/video/5.png' %}"/></div>
+			</div>
+		</div>
+	</section>
+	<section class="project pr2-section">
+		<div class="container">
+			<h3>{% snippet "4050" safe=true %}Цены на ремонт и отделку{% endsnippet %}</h3>
+			<div class="project-flex repair clearfix">
+				<div class="project-border"></div>
+				<div class="project-item anim"><img src="{% static 'img/repair/1.png' %}" class="project-img"/>
+					<h5>{% snippet "4070" safe=true %}Косметический{% endsnippet %}</h5>
+					<p class="price">{% snippet "4076" safe=true %}4000 руб/кв.м{% endsnippet %}</p>
+					<p class="extra-text">{% snippet "4083" safe=true %}+ черновой материал 4500 руб/кв.м{% endsnippet %}</p>
+					<div class="project-line"></div>
+					<p class="description">{% snippet "4094" safe=true %}· Эскизный проект<br>· Демонтаж<br>· Замена электрики<br>· Частичная замена труб водоснабжения<br>· Выравнивание пола<br>· Монтаж перегородок<br>· Выравнивание стен и потолков<br>· Монтаж потолочных карнизов<br>· Укладка плитки<br>· Установка сантехники<br>· Укладка ламината и паркетной доски<br>· Устройство потолков и ГКЛ (один уровень)<br>· Поклейка обоев (винил, флизелин)<br>· Установка межкомнатных дверей{% endsnippet %}<br><br><span class='e-text'>{% snippet "4142" safe=true %}* Более подробную инормацию и цены уточняйте у менеджеров{% endsnippet %}</span></p>
+					<button class="button project-detail"><span class="button-text">Подробнее</span></button>
+					<button class="button buy-project" data-type="Заказ косметического ремонта"><span class='button-text'>Заказать</span><span class="button-hover"></span></button>
+				</div>
+				<div class="project-item anim"><img src="{% static 'img/repair/2.png' %}" class="project-img"/>
+					<h5>{% snippet "4172" safe=true %}Новостройка{% endsnippet %}</h5>
+					<p class="price">{% snippet "4178" safe=true %}8000 руб/кв.м{% endsnippet %}</p>
+					<p class="extra-text">{% snippet "4185" safe=true %}+ черновой материал 6500 руб/кв.м{% endsnippet %}</p>
+					<div class="project-line"></div>
+					<p class="description">{% snippet "4196" safe=true %}· Эскизный проект<br>· Демонтажные работы<br>· Монтаж перегородок<br>· Устройство вентиляции<br>· Монтаж электропроводки<br>· Монтаж труб водоснабжения<br>· Выравнивание пола (стяжка 5-12см)<br>· Устройство шумоизоляции<br>· Выравнивание стен и потолков<br>· Монтаж потолочных карнизов<br>· Укладка керамогранита, плитки, мозайки<br>· Установка сантехники<br>· Укладка паркета и паркетной доски<br>· Устройство потолков и ГКЛ (несколько уровней, криволинейные)<br>· Поклейка обоев (любые виды)<br>· Замена электрики<br>· Окраска стен и потолков<br>· Монтаж дверей<br>· Устройство теплых полов<br>· Утепление лоджий и балконов<br>· Декоративная отделка стен{% endsnippet %}</p>
+					<button class="button project-detail"><span class="button-text">Подробнее</span></button>
+					<button class="button buy-project" data-type="Заказ ремонта в новостройку"><span class='button-text'>Заказать</span><span class="button-hover"></span></button>
+				</div>
+				<div class="project-item anim"><img src="{% static 'img/repair/3.png' %}" class="project-img"/>
+					<h5>{% snippet "4285" safe=true %}Премиум{% endsnippet %}</h5>
+					<p class="price">{% snippet "4291" safe=true %}13000 руб/кв.м{% endsnippet %}</p>
+					<p class="extra-text">{% snippet "4298" safe=true %}эконом + чистовые материалы{% endsnippet %}</p>
+					<div class="project-line"></div>
+					<p class="description">{% snippet "4308" safe=true %}· Чертежный проект (планировочное решение по БТИ, без изменений)<br>· Электромонтажные работы<br>· Монтаж труб водоснабжения и канализации<br>· Выравнивание пола<br>· Монтаж перегородок<br>· Выравнивание стен и потолков<br>· Монтаж потолочных карнизов<br>· Укладка плитки<br>· Установка сантехники<br>· Укладка ламината на подложку<br>· Укладка керамогранита, плитки, мозайки<br>· Установка сантехники<br>· Поклейка обоев (Винил, флизилин)<br>· Установка межкомнатных дверей<br>· Полы: ламинат 33 класса, керамогранит (кухня, прихожая)<br>· Потолки: покраска<br>· Стены: обои виниловые на флизелиновой основе, производство Россия<br>· Санузлы: плитка производство Россия, унитаз, полотенцесушитель, раковина, ванна, смесители{% endsnippet %}</p>
+					<button class="button project-detail"><span class="button-text">Подробнее</span></button>
+					<button class="button buy-project" data-type="Заказ премиум ремонта"><span class='button-text'>Заказать</span><span class="button-hover"></span></button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="quiz dark-bg">
+		<div class="quiz-bg-wrap"><img src="{% static 'img/quiz/bg.png' %}"/></div>
+		<div class="container">
+			<h3>{% snippet "4404" safe=true %}Рассчитайте стоимость вашего проекта за 5 минут{% endsnippet %}</h3>
+			<h4>{% snippet "4415" safe=true %}Чтобы его получить, пройдите небольшой тест, который покажет стоимость и время реализации проекта{% endsnippet %}</h4>
+			<div class="quiz-border"></div>
+			<div class="quiz-wrap container">
+				<div class="quiz-container">
+					<div class="quiz-item clearfix">
+						<p class="slide-name">Укажите площадь помещения</p>
+						<div class="quiz-radio-flex radio1">
+							<div class="quiz-radio-item clearfix"><span>Дом</span>
+								<input type="radio" name="house-type" id="qr1"/>
+								<label for="qr1"></label>
+							</div>
+							<div class="quiz-radio-item clearfix"><span>Квартира-студия</span>
+								<input type="radio" name="house-type" id="qr2"/>
+								<label for="qr2"></label>
+							</div>
+							<div class="quiz-radio-item clearfix"><span>1 комната</span>
+								<input type="radio" name="house-type" id="qr3"/>
+								<label for="qr3"></label>
+							</div>
+							<div class="quiz-radio-item clearfix"><span>2 комнаты</span>
+								<input type="radio" name="house-type" id="qr4"/>
+								<label for="qr4"></label>
+							</div>
+							<div class="quiz-radio-item clearfix"><span>3 комнаты</span>
+								<input type="radio" name="house-type" id="qr5"/>
+								<label for="qr5"></label>
+							</div>
+							<div class="quiz-radio-item clearfix"><span>4 комнаты</span>
+								<input type="radio" name="house-type" id="qr6"/>
+								<label for="qr6"></label>
+							</div>
+							<div class="quiz-radio-item clearfix"><span>5 комнат</span>
+								<input type="radio" name="house-type" id="qr7"/>
+								<label for="qr7"></label>
+							</div>
+						</div>
+						<div class="quiz-square">
+							<input type="text" name="square" placeholder="Введите площадь"/><span>м<sup>2</sup></span>
+						</div>
+						<div class="quiz-first-step-bottom clearfix">
+							<div class="quiz-file"><span>Прикрепить план помещения:</span>
+								<label for="file"><img src="{% static 'img/quiz/1.png' %}"/><span>Прикрепить файл</span></label>
+								<input type="file" id="file"/>
+							</div>
+							<button data-image="2" class="button quiz-next step1"><span class="button-text">Далее</span><span class="button-hover"></span></button>
+						</div>
+					</div>
+					<div class="quiz-item clearfix">
+						<p class="slide-name">Выберите необходимые вам услуги:</p>
+						<div class="quiz-radio-flex radio2">
+							<div class="quiz-checkbox-item clearfix">
+								<input type="checkbox" name="services" id="qr21"/>
+								<label for="qr21"></label><span>Планировочное <br>решение</span>
+							</div>
+							<div class="quiz-checkbox-item clearfix">
+								<input type="checkbox" name="services" id="qr22"/>
+								<label for="qr22"></label><span>Ремонтно-отделочные <br>работы</span>
+							</div>
+							<div class="quiz-checkbox-item clearfix">
+								<input type="checkbox" name="services" id="qr23"/>
+								<label for="qr23"></label><span>3D визуализация</span>
+							</div>
+							<div class="quiz-checkbox-item clearfix">
+								<input type="checkbox" name="services" id="qr24"/>
+								<label for="qr24"></label><span>Подбор мебели</span>
+							</div>
+							<div class="quiz-checkbox-item clearfix">
+								<input type="checkbox" name="services" id="qr25"/>
+								<label for="qr25"></label><span>Комплектация помещения <br>отделочными материалами <br>и мебелью</span>
+							</div>
+							<div class="quiz-checkbox-item clearfix">
+								<input type="checkbox" name="services" id="qr26"/>
+								<label for="qr26"></label><span>Авторский надзор</span>
+							</div>
+							<div class="quiz-checkbox-item clearfix">
+								<input type="checkbox" name="services" id="qr27"/>
+								<label for="qr27"></label><span>Контроль бюджета</span>
+							</div>
+						</div>
+						<div class="quiz-middle-step-bottom clearfix">
+							<div class="quiz-file"></div>
+							<button data-image="1" class="quiz-prev button"><span class="button-text">Назад</span><span class="button-hover"></span></button>
+							<button data-image="3" class="button quiz-next step2"><span class="button-text">Далее</span><span class="button-hover"></span></button>
+						</div>
+					</div>
+					<div class="quiz-item clearfix">
+						<p class="slide-name">Выберите стиль для своего интерьера:</p>
+						<div class="quiz-radio-flex radio3">
+							<div class="quiz-checkbox-item mb clearfix">
+								<input type="radio" name="style-name" id="qr31"/>
+								<label for="qr31"></label><span>Скандинавский</span>
+							</div>
+							<div class="quiz-checkbox-item mb clearfix">
+								<input type="radio" name="style-name" id="qr32"/>
+								<label for="qr32"></label><span>Классика</span>
+							</div>
+							<div class="quiz-checkbox-item mb clearfix">
+								<input type="radio" name="style-name" id="qr33"/>
+								<label for="qr33"></label><span>Минимализм</span>
+							</div>
+							<div class="quiz-checkbox-item clearfix">
+								<input type="radio" name="style-name" id="qr34"/>
+								<label for="qr34"></label><span>Лофт</span>
+							</div>
+							<div class="quiz-checkbox-item clearfix">
+								<input type="radio" name="style-name" id="qr35"/>
+								<label for="qr35"></label><span>Современный</span>
+							</div>
+							<div class="quiz-checkbox-item clearfix">
+								<input type="radio" name="style-name" id="qr36"/>
+								<label for="qr36"></label><span>Арт-деко</span>
+							</div>
+						</div>
+						<div class="quiz-middle-step-bottom clearfix st3">
+							<div class="quiz-file"></div>
+							<button data-image="2" class="quiz-prev button"><span class="button-text">Назад</span><span class="button-hover"></span></button>
+							<button data-image="4" class="button quiz-next step3"><span class="button-text">Далее</span><span class="button-hover"></span></button>
+						</div>
+					</div>
+					<div class="quiz-item">
+						<form action="{% url 'send_mail' %}" method='post' class="quiz-form">{% csrf_token %}
+							<fieldset>
+								<input type="text" name="name" placeholder="Введите имя" required="required"/>
+								<input type="text" name="phone" placeholder="Введите телефон" required="required"/>
+							</fieldset>
+							<input type="text" name="text" placeholder="Ваш комментарий"/>
+							<input type="hidden" name="square"/>
+							<input type="hidden" name="place-type"/>
+							<input type="hidden" name="serve"/>
+							<input type="hidden" name="style"/>
+                            <input type="hidden" name="type" value="Заявка на расчет стоимости">
+							<button type="submit" class="button quiz-submit"><span class="button-text">Получить расчет</span><span class="button-hover"></span></button>
+						</form>
+						<p class="quiz-form-text">После заполнения заявки в течение 10 минут с вами <br>свяжется наш специалист и предоставит консультацию</p>
+					</div>
+				</div>
+			</div>
+			<div class="quiz-img-container">
+				<div class="container"><img src="{% static 'img/quiz/i1.png' %}" data-image="1" class="quiz-cur-img"/><img src="{% static 'img/quiz/i2.png' %}" data-image="2"/><img src="{% static 'img/quiz/i3.png' %}" data-image="3"/><img src="{% static 'img/quiz/i4.png' %}" data-image="4"/></div>
+			</div>
+		</div>
+	</section>
+	<section class="stuff">
+		<div class="container">
+			<h3>{% snippet "4763" safe=true %}Каждый наш дизайнер интерьера имеет узкопрофильное <br>
+                высшее образование и опыт работы более 5 лет{% endsnippet %}</h3>
+			<h4>{% snippet "4797" safe=true %}Каждый дизайнер старается максимально точно реализовать задумки клиента{% endsnippet %}</h4>
+			<div class="stuff-block">
+				<div class="stuff-slider">
+					<div class="swiper-container stuff-top">
+						<div class="swiper-wrapper">
+                            {% for stuff_item in stuff %}
+                                <div class="swiper-slide clearfix">
+                                    <div class="stuff-img-wrap"><img src="{{ stuff_item.image.url }}"/></div>
+                                    <div class="stuff-text"><span class="name">{{ stuff_item.stuff.name }}</span>
+                                        <div class="stuff-line"></div><span class="exp">{{ stuff_item.stuff.post }}</span>
+                                        <p>{{ stuff_item.stuff.description }}</p>
+                                        <button class="button consultation-button" data-type="Консультация у {{ stuff_item.stuff.name }}"><span class="button-text">Заказать консультацию</span><span class="button-hover"></span></button>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+						</div>
+					</div>
+					<div class="stuff-thumb-wrap">
+						<div class="stuff-prev slide-prev"><img src="{% static 'img/arrow-left.png' %}"/></div>
+						<div class="stuff-next slide-next"><img src="{% static 'img/arrow-right.png' %}"/></div>
+						<div class="swiper-container stuff-thumb">
+							<div class="swiper-wrapper">
+                                {% for stuff_item in stuff %}
+                                    <div class="swiper-slide"><img src="{{ stuff_item.image.url }}"/></div>
+                                {% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="online dark-bg">
+		<div class="online-bg-wrap"><img src="{% static 'img/online/bg.png' %}"/></div>
+		<div class="container">
+			<h3>{% snippet "5330" safe=true %}Контролируйте работу в онлайн-режиме{% endsnippet %}</h3>
+			<div class="online-block clearfix">
+				<div class="online-left">
+					<div class="online-item anim">
+						<h5><img src="{% static 'img/online/1.png' %}"/><span>{% snippet "5347" safe=true %}Возможность видеонаблюдения{% endsnippet %}</span></h5>
+						<p>{% snippet "5353" safe=true %}Мы подключаем камеры с круглосуточной трансляцией, чтобы вы могли наблюдят за процессом ремонта в любое время{% endsnippet %}</p>
+						<div class="online-item-line"></div>
+					</div>
+					<div class="online-item anim">
+						<h5><img src="{% static 'img/online/2.png' %}"/><span>{% snippet "5380" safe=true %}Проверка мастером{% endsnippet %}</span></h5>
+						<p>{% snippet "5386" safe=true %}Мастер приходит на объект каждый день и следит за процессом работы.{% endsnippet %}</p>
+						<div class="online-item-line"></div>
+					</div>
+					<div class="online-item anim">
+						<h5><img src="{% static 'img/online/3.png' %}"/><span>{% snippet "5408" safe=true %}Ежедневный фотоотчёт{% endsnippet %}</span></h5>
+						<p>{% snippet "5414" safe=true %}Ежедневно мы предоставляем,  фотоотчёт о проделаной нами работе.{% endsnippet %}</p>
+					</div>
+				</div>
+				<div class="online-right"><img src="{% static 'img/online/pc.png' %}"/></div>
+			</div>
+		</div>
+		<div class="container online-extra">
+			<p>{% snippet "5434" safe=true %}Подключаем камеры с круглосуточной трансляцией, чтобы вы могли смотреть как происходит ремонт в вашей квартире в любое время{% endsnippet %}</p>
+		</div>
+	</section>
+	<section class="china">
+		<div class="china-bg-wrap"><img src="{% static 'img/china/bg.png' %}"/></div>
+		<div class="container">
+			<h3>{% snippet "5463" safe=true %}Мебельные туры в Китай{% endsnippet %}</h3>
+			<h4>Наша компания предоставляет возможность купить мебель в Китае, <br>поехав в мебельный тур и при этом <span class='red-h'>сэкономить до 5 раз!</span></h4>
+			<div class="china-flex">
+                <img src="static/img/sofa.png" class="mob-china-img mobimg1"/>
+                <img src="static/img/placeholder.png" class="mob-china-img mobimg2"/>
+				<div class="china-border"></div>
+				<div class="china-item">
+					<p>{% snippet "5531" safe=true %}Мы с удовольствием спланируем <br>индивидуальный тур для Вас, или <br>предоставим различные каталоги, <br>из которых Вы сможете выбрать <br>мебель на свой вкус.{% endsnippet %}</p>
+					<button class="button china-button cb1"><span class="button-text">Узнать подробнее <br>о сценарии тура</span><span class="button-hover"></span></button>
+				</div>
+				<div class="china-item">
+					<p>{% snippet "5566" safe=true %}Сочетая богатейший опыт и <br>современные технологии, к <br>сегодняшнему дню китайские <br>мебельщики достигли высочайшего <br>мастерства в своем деле.{% endsnippet %}</p>
+					<button class="button china-button cb2"><span class="button-text">Узнать подробнее <br>о качестве мебели из Китая</span><span class="button-hover"></span></button>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="replies">
+		<div class="container">
+			<h3>{% snippet "5600" safe=true %}Главный показатель нашей работы - это ваши отзывы{% endsnippet %}</h3>
+			<div class="replies-block">
+				<div class="replies-slider">
+					<div class="swiper-container replies-top">
+						<div class="swiper-wrapper">
+                            {% for reply in replies %}
+                                <div class="swiper-slide clearfix">
+                                    <div class="replies-img-wrap">
+                                        <svg class="replies-svg">
+										    <rect x="1" y="1"></rect>
+									    </svg>
+                                        <div class="img-extra-wrap"><img src="{{ reply.image.url }}"/></div>
+                                    </div>
+                                    <div class="replies-text"><span class="name">{{ reply.reply.name }}</span>
+                                        <div class="replies-line"></div><span class="prod">{{ reply.reply.description }}</span>
+                                        <p>{{ reply.reply.text }}</p>
+                                        <button class="button replies-button"><span class="button-text">Смотреть видео отзыв</span><span class="button-hover"></span></button>
+                                    </div>
+                                </div>
+                            {% endfor %}
+
+						</div>
+					</div>
+					<div class="replies-thumb-wrap">
+						<div class="replies-border"></div>
+						<div class="replies-prev slide-prev"><img src="{% static 'img/arrow-left.png' %}"/></div>
+						<div class="replies-next slide-next"><img src="{% static 'img/arrow-right.png' %}"/></div>
+						<div class="swiper-container replies-thumb">
+							<div class="swiper-wrapper">
+                                {% for reply in replies %}
+                                    <div class="swiper-slide anim"><img src="{{ reply.image.url }}"/></div>
+                                {% endfor %}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="dark-bg room">
+		<div class="room-bg-wrap"><img src="{% static 'img/room/bg.png' %}"/></div>
+		<div class="container">
+			<h3>{% snippet "6259" safe=true %}Приходите к нам в шоурум, чтобы посмотреть образцы материалов <br>и примеры дизайн-проектов которые мы реализовали{% endsnippet %}</h3>
+			<h4>{% snippet "6278" safe=true %}Мы объединили всё в одном месте: шоу-рум и офис с дизайнерами, чтобы вам было удобнее{% endsnippet %}</h4>
+			<div class="room-block clearfix">
+				<div class="room-right">
+					<h5>{% snippet "6300" safe=true %}У нас в шоу-руме вы найдёте:{% endsnippet %}</h5>
+					<ul>
+						<li>{% snippet "6310" safe=true %}• 150 видов кирпича{% endsnippet %}</li>
+						<li>{% snippet "6318" safe=true %}• 70 видов стеновых панелей{% endsnippet %}</li>
+						<li>{% snippet "6327" safe=true %}• Огромный ассортимент ламината и обоев{% endsnippet %}</li>
+						<li>{% snippet "6337" safe=true %}• 340 видов плитки{% endsnippet %}</li>
+						<li>{% snippet "6345" safe=true %}• Элементы декора (люстры, светильники, шторы){% endsnippet %}</li>
+					</ul>
+					<div class="p-container clearfix">
+						<p>Также вы сможете получить <br><span>бесплатную консультацию</span> <br>дизайнера по интересующему <br>вас вопросу</p>
+					</div>
+				</div>
+				<div class="room-left">
+                    <img src="{% static 'img/room/img.png' %}"/>
+                    <img src="{% static 'img/room/img.png' %}"/>
+                </div>
+			</div>
+		</div>
+	</section>
+	<section class="taxi">
+		<div class="container">
+			<div class="taxi-left">
+				<h5>Оставьте заявку и мы вызовем для вас <br>бесплатное такси до шоу-рума</h5><img src="{% static 'img/taxi.png' %}"/>
+			</div>
+			<div class="taxi-right anim">
+				<h6>Приезжайте к нам в <br>шоу-рум</h6>
+				<div class="taxi-line"></div>
+				<form action="{% url 'send_mail' %}" method="post">{% csrf_token %}
+					<input type="text" name="name" required="required" placeholder="Введите имя"/>
+					<input type="text" name="phone" required="required" placeholder="Введите телефон"/>
+                    <input type="hidden" name="type" value="Заказ такси">
+					<button type="submit" class="button taxi-button"><span class="button-text">Вызвать бесплатное такси</span><span class="button-hover"></span></button>
+				</form>
+			</div>
+		</div>
+	</section>
+	<footer>
+		<div class="container">
+			<div class="footer-block">
+				<div class="footer-block-bg-wrap"><img src="{% static 'img/footer/bg.png' %}"/></div>
+				<div class="footer-border"></div>
+				<ul>
+					<li>
+						<div class="contact-img-wraper"><img src="{% static 'img/footer/1.png' %}"/></div><span>{% snippet "6517" safe=true %}г. Артём, ул. Фрунзе, 16{% endsnippet %}</span>
+					</li>
+					<li>
+						<div class="contact-img-wraper"><img src="{% static 'img/footer/2.png' %}"/></div><span>{% snippet "6531" safe=true %}youremail@mail.ru{% endsnippet %}</span>
+					</li>
+					<li>
+						<div class="contact-img-wraper"><img src="{% static 'img/footer/3.png' %}"/></div><span>{% snippet "6541" safe=true %}skype - yourskype{% endsnippet %}</span>
+					</li>
+					<li>
+						<div class="contact-img-wraper"><img src="{% static 'img/footer/4.png' %}"/></div><span>{% snippet "6553" safe=true %}8 (981) 947 - 06 - 82{% endsnippet %}</span>
+					</li>
+				</ul>
+				<button class="button callback-button" data-type="Заявка на обратный звонок"><span class="button-text">Перезвоните мне</span><span class="button-hover"></span></button>
+				<div class="footer-line"></div>
+				<div class="footer-socials-flex"><a href="#"><img src="{% static 'img/i-vk.png' %}"/></a><a href="#"><img src="{% static 'img/i-i.png' %}"/></a><a href="#"><img src="{% static 'img/i-f.png' %}"/></a><a href="#"><img src="{% static 'img/i-t.png' %}"/></a></div>
+			</div>
+		</div>
+		<div class="map"><iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A73bfae69146e40f618f5eb5f6ee267e024d86b5d8a6dd562b22d9ac49f3338a0&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe></div>
+	</footer>
+	<div class="layer">
+		<div class="popup-min order-popup"><img src="{% static 'img/close.png' %}" class="exit-popup"/>
+			<h6>Оставьте свои <br>контакты</h6>
+			<div class="popup-line"></div>
+			<form action="{% url 'send_mail' %}" method="post">{% csrf_token %}
+				<input type="text" name="name" placeholder="Введите имя" required="required"/>
+				<input type="text" name="phone" placeholder="Введите телефон" required="required"/>
+                <input type="hidden" name="type">
+				<button class="button popup-min-button"><span class="button-text">Оставить заявку</span><span class="button-hover"></span></button>
+			</form>
+			<p>Наш специалист свяжется с вами <br>в течении 10 минут</p>
+		</div>
+		<div class="popup-min thank"><img src="{% static 'img/close.png' %}" class="exit-popup"/>
+			<h6>Спасибо за оказанное <br>доверие!</h6>
+			<div class="popup-line"></div>
+			<p>Наш специалист свяжется с вами в течение 10 минут и предоставит подробную консультацию по вашему вопросу</p>
+			<div class="popup-line"></div>
+			<p>Присоединяйтесь к нам в социальных сетях:</p>
+			<div class="popup-socials"><a href="#"><img src="{% static 'img/vk.png' %}"/></a><a href="#"><img src="{% static 'img/insta.png' %}"/></a><a href="#"><img src="{% static 'img/fb.png' %}"/></a></div>
+		</div>
+		<div class="popup-china-1">
+			<h4>Сценарий мебельного тура в Китай</h4>
+			<h5>Шаг 1. Выбор подходящего варианта поездки</h5>
+			<div class="china-block clearfix">
+				<div class="china-border-1"></div>
+				<div class="china-popup-flex row-1">
+					<div class="china-popup-item">
+						<h6>Вариант №1</h6>
+						<div class="china-line"></div>
+						<p>Отправиться в мебельный тур в Китай лично, чтобы самому выбрать и купить подходящую мебель и стройматериалы. <br><br>Разумеется, при полном сопровождении сделки нашими сотрудниками, которые займутся всеми рабочими вопросами, вплоть до доставки купленной мебели к порогу Вашего дома. <br><br>Этот вариант потребует от Вас наибольшего участия. Но он и наиболее выгоден экономически, а также дает максимальную свободу в выборе товара.</p>
+					</div>
+					<div class="china-popup-item">
+						<h6>Вариант №2</h6>
+						<div class="china-line"></div>
+						<p>В тур за мебелью в Китай отправить вместо себя нашего дизайнера, который возьмет на себя задачу по отбору подходящей вам мебели. <br><br>Каждая единица товара будет безусловно с Вами согласована. Это компромиссный вариант, позволяющий довольно выгодно (дополнительно оплачивается лишь работа нашего дизайнера) приобрести интересующий Вас товар без лишних действий (выезда в Китай, походов по торговым центрам и т.д.).</p>
+					</div>
+				</div>
+				<div class="china-popup-flex row-2">
+					<div class="china-popup-item">
+						<h6>Шаг 2. Заключение договора <br>о сотрудничестве</h6>
+						<p>Если Вы выбрали определенный вариант поездки и наш менеджер обговорил с Вами все нюансы Вашей поездки, переходим к этапу заключения договора. <br><br>Когда договор подписан, сотрудники компании приступают к организации Вашей поездки.</p>
+					</div>
+					<div class="china-popup-item">
+						<h6>Шаг 3. Организация <br>поездки</h6>
+						<p>На этапе организации поездки наша компания оформляет визу, бронирует билеты и отель для Вас. Вашего участия в подготовке мебельного тура в Китай не требуется. Обратите внимание на то, что оформление визы в Китай занимает до 10 рабочих дней.</p>
+					</div>
+				</div>
+				<div class="china-popup-flex row-3">
+					<div class="china-popup-item">
+						<h6>Шаг 4. Посещение рынков <br>и фабрик, закупка товара</h6>
+						<p>После прибытия в Китай представитель нашей компании встречает Вас и помогает разместиться в выбранной заранее гостинице. <br><br>При посещение выставок ,рынков  и фабрик Вас будет сопровождать наш гид-переводчик, который даст хорошие советы по выбору мебели, строительных материалов и поможет оформить нужный Вам товар.</p>
+					</div>
+					<div class="china-popup-item">
+						<h6>Шаг 5. Контроль качества <br>товара</h6>
+						<p>На данном этапе осуществляется контроль качества товара при поступлении его на склад. При загрузке контейнера обязательно будет присутствовать наш сотрудник, который проследит, чтобы товар был грамотно погружен: легкие вещи лежали сверху, тяжелые — снизу, стеклянные предметы переложены мягкими материалами, чтобы избежать пустых пространств в контейнере, что может вызвать повреждение груза при транспортировке.</p>
+					</div>
+				</div>
+				<div class="china-popup-flex row-4">
+					<div class="china-popup-item">
+						<h6>Шаг 6. Таможенное <br>формление товара на <br>территории РФ и Китая</h6>
+						<p>Осознавая важность этапа доставки товара из Китая, мы тщательно подошли к организации логистического процесса,чтобы оптимизировать Ваши расходы на каждом этапе: начиная от подачи контейнера и заканчивая доставкой на наш склад временного хранения. Все необходимые документы (инвойсы, упаковочные, сертификаты, накладные) на груз – МЫ ГОТОВИМ САМИ! Таможенные платежи всегда просчитываются отдельно на основании точных данных по грузу. Эта сумма зависит от многих параметров: общий вес и объем груза, материал из которого изготовлен товар, его стоимость, место доставки. В случае, если у Вас отлажены собственные схемы доставки из Китая - мы готовы работать по чётким инструкциям Вашей транспортной компании.</p>
+					</div>
+					<div class="china-popup-item">
+						<h6>Шаг 7. Доставка <br>товара до двери <br>Вашего дома</h6>
+						<p>Наши опытные сборщики мебели аккуратно доставят товар до двери Вашего дома со клада временного хранения и профессионально его соберут.</p>
+					</div>
+				</div>
+				<div class="china-buttons">
+					<div class="china-border-2"></div>
+					<button class="button china-button-detail"><span class="button-text">Узнать подробнее <br>о качестве мебели из Китая</span><span class="button-hover"></span></button>
+					<button class="button china-button-order" data-type="Заявка на мебельный тур"><span class="button-text">Оставить заявку <br>на мебельный тур</span><span class="button-hover"></span></button>
+				</div>
+			</div>
+		</div>
+		<div class="popup-china-2 popup-to-right">
+			<h4>Выбор мебели в Китае в сотни раз больше, <br>а цены ниже до <span>80%</span> <br>чем в любом салоне или магазине России</h4>
+			<p class="descriptor">Вы можете сократить расходы на формирование интерьера в 3–5 раз при покупке мебели, интерьерных элементов, отделочных материалов и не потерять в качестве</p>
+			<div class="popup-china-block-2">
+				<div class="popup-china-block-2-border"></div>
+				<div class="popup-china-slider">
+					<div class="china-slider">
+						<div class="swiper-slide">
+							<div class="china-img-wrap"><img src="{% static 'img/c1.png' %}"/></div>
+							<p class="slide-text"><span>30 000 руб.</span> за все товары на фото</p>
+						</div>
+						<div class="swiper-slide">
+							<div class="china-img-wrap"><img src="{% static 'img/c2.png' %}"/></div>
+							<p class="slide-text"><span>20 000 руб.</span> за все товары на фото</p>
+						</div>
+						<div class="swiper-slide">
+							<div class="china-img-wrap"><img src="{% static 'img/c1.png' %}"/></div>
+							<p class="slide-text"><span>30 000 руб.</span> за все товары на фото</p>
+						</div>
+					</div>
+				</div>
+				<h4>Качество китайской мебели</h4>
+				<p class="text-middle">Чем товар дороже, тем больше разница в цене по сравнению со стоимостью, устанавливаемой уже на территории России, ведь даже самые элитные магазины реализуют 87% мебели от китайских производителей. Эта экономия достигается даже с учетом расходов, связанных с доставкой груза и его таможенным оформлением.</p>
+				<p class="text-bordered">Компания <span>"inDesign"</span> не только организует ваш мебельный тур в Китай, <br>но и поможет правильно сориентироваться <br>во всем разнообразии китайской мебели!</p>
+				<p class="text-bottom">Наши специалисты тщательно следят за ситуацией на китайском мебельном рынке. Мы изучаем технологический уровень предприятий-изготовителей мебели, оцениваем их производственную культуру, выясняем, насколько работа тех или иных компаний соответствует международным нормам и законодательству Китая, изучаем список их клиентов внутри страны и за рубежом. <br><br>С лучшими производителями мебели из Китая мы устанавливаем и развиваем партнерские отношения – напрямую, без посредников! Это позволяет нашим клиентам получать товар не только с гарантированным качеством, но и по наилучшей цене. <br><br>Вы можете не ограничиваться в рамках тура теми фабриками и салонами, которые Вам будет рекомендовать наша компания. Мебельная промышленность Китая велика, и Вы всегда сможете выбрать что-то по своему вкусу и кошельку (да-да, цены Вас порадуют, особенно если Вы нацелены покупать мебель из Китая оптом). <br><br>Конечно, мы не можем поручиться за качество продукции малоизвестных поставщиков, но в любом случае готовы оказать Вам помощь в поиске подходящей мебели и отстаивании ваших интересов как покупателя.</p>
+				<div class="popup-china-2-button-block clearfix">
+					<button class="button button-scenario"><span class="button-text">Узнать подробнее <br>о сценарии тура</span><span class="button-hover"></span></button>
+					<button class="button button-order-cm" data-type="Заявка на мебельный тур"><span class="button-text">Оставить заявку <br>на мебельный тур</span><span class="button-hover"></span></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	<script src="{% static 'libs/owl-carousel/owl.carousel.js' %}"></script>
+	<script src="{% static 'libs/Swiper-4.0.6/dist/js/swiper.min.js' %}"></script>
+	<script src="{% static 'libs/jquery-spincrement-master/jquery.spincrement.min.js' %}"></script>
+	<script src="{% static 'js/main.js' %}"></script>
+{% addendum_toolbar %}
+</body>

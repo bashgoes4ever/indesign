@@ -18,11 +18,10 @@ from django.contrib import admin
 from django.conf import settings
 from django.conf.urls.static import static
 
-
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('interior.urls')),
     url(r'^', include('send_mail.urls')),
-    url(r'^i18n/$', 'django.views.i18n.set_language', name='set_language'),
-    url(r'^addendum/', include('addendum.urls', namespace='addendum'))
+    #url(r'^i18n/$', 'django.views.i18n.set_language', name='set_language'),
+    #url(r'^addendum/', include('addendum.urls', namespace='addendum'))
 ]
